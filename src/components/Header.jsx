@@ -13,7 +13,10 @@ function Header() {
           <nav className="col-start-3 justify-self-end">
             <ul>
               <li>
-                <Link to="/login" className="">
+                <Link
+                  to="/login"
+                  className="py-2 px-4 bg-gray-100 rounded-full font-semibold transition-all duration-300 hover:bg-gray-300"
+                >
                   Login
                 </Link>
               </li>
