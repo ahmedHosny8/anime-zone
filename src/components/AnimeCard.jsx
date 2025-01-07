@@ -1,5 +1,5 @@
-function AnimeCard() {
-  return <article>Anime Card</article>;
+function AnimeCard({ anime }) {
+  return <article></article>;
 }
 
 export default AnimeCard;

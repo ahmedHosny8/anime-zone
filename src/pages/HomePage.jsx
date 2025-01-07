@@ -1,11 +1,33 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import AnimeCard from '../components/AnimeCard';
 import pikachuImage from '../assets/pikachu.png';
 
 function HomePage() {
-  const { animeList, setAnimeList } = useState([]);
+  const [animeList, setAnimeList] = useState([]);
 
-  useEffect(() => {}, []);
+  const getAnimeList = async () => {
+    try {
+      const res = await axios.get('http://localhost:4000/animeList');
+      // console.log(res.data);
+
+      setAnimeList(res.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    getAnimeList();
+  }, []);
+
+  const renderedAnimeList = animeList.map((anime) => {
+    return (
+      <li key={anime.id}>
+        <AnimeCard anime={anime} />
+      </li>
+    );
+  });
 
   return (
     <>
@@ -23,9 +45,7 @@ function HomePage() {
 
       <section className="bg-gray-50 py-14 px-4">
         <div className="max-w-screen-lg mx-auto">
-          <div>
-            <AnimeCard />
-          </div>
+          <ul>{renderedAnimeList}</ul>
         </div>
       </section>
     </>
