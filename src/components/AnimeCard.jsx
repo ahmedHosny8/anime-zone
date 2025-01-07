@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import Button from './Button';
-import { Link } from 'react-router-dom';
 import { Pencil, Trash2 } from 'lucide-react';
+import Button from './Button';
 
 function AnimeCard({ anime }) {
   return (
@@ -18,10 +17,10 @@ function AnimeCard({ anime }) {
       </div>
 
       <div className="col-span-3 mt-4 grid grid-cols-2 gap-2">
-        <Button type="secondary">
+        <Button type="secondary" to="/edit">
           <Pencil size={16} className="mr-1 mb-0.5" /> Edit
         </Button>
-        <Button type="warning" to="/edit">
+        <Button type="warning">
           <Trash2 size={16} className="mr-1 mb-0.5" /> Delete
         </Button>
       </div>
