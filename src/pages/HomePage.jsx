@@ -1,3 +1,4 @@
+import AnimeCard from '../components/AnimeCard';
 import pikachuImage from '../assets/pikachu.png';
 
 function HomePage() {
@@ -11,6 +12,14 @@ function HomePage() {
               <span className="text-brand">Anime</span>
               <br /> List
             </h1>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-14 px-4">
+        <div className="max-w-screen-lg mx-auto">
+          <div>
+            <AnimeCard />
           </div>
         </div>
       </section>
