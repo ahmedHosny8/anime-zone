@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './pages/Root';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
+import CreatePage from './pages/CreatePage';
 import EditPage from './pages/EditPage';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <LoginPage />,
+      },
+      {
+        path: '/create',
+        element: <CreatePage />,
       },
       {
         path: '/edit',
