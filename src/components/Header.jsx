@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { UserRound } from 'lucide-react';
+import Button from './Button';
 import onePieceLogo from '../assets/one-piece.svg';
 
 function Header() {
@@ -13,12 +15,9 @@ function Header() {
           <nav className="col-start-3 justify-self-end">
             <ul>
               <li>
-                <Link
-                  to="/login"
-                  className="py-2 px-4 bg-gray-100 rounded-full font-semibold transition-all duration-300 hover:bg-gray-300"
-                >
-                  Login
-                </Link>
+                <Button type="secondary" to="/login">
+                  <UserRound size={16} className="mr-1 mb-0.5" /> Login
+                </Button>
               </li>
             </ul>
           </nav>

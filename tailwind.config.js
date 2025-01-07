@@ -9,6 +9,7 @@ export default {
       },
       colors: {
         brand: '#f84072',
+        'brand-dark': '#c6335b',
       },
     },
   },
