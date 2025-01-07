@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Plus } from 'lucide-react';
 import axios from 'axios';
 import AnimeCard from '../components/AnimeCard';
 import pikachuImage from '../assets/pikachu.png';
@@ -50,6 +52,13 @@ function HomePage() {
           </ul>
         </div>
       </section>
+
+      <Link
+        to="/create"
+        className="fixed bottom-8 right-8 inline-block p-4 rounded-full transition-all duration-300 bg-brand hover:bg-brand-dark"
+      >
+        <Plus size={24} color="white" />
+      </Link>
     </>
   );
 }
