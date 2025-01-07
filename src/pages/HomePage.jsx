@@ -1,7 +1,12 @@
+import { useState, useEffect } from 'react';
 import AnimeCard from '../components/AnimeCard';
 import pikachuImage from '../assets/pikachu.png';
 
 function HomePage() {
+  const { animeList, setAnimeList } = useState([]);
+
+  useEffect(() => {}, []);
+
   return (
     <>
       <section className="bg-gray-50 py-14 px-4">

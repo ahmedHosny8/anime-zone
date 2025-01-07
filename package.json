@@ -11,6 +11,7 @@
     "server": "json-server -p 4000 --watch db.json"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "json-server": "^1.0.0-beta.3",
     "lucide-react": "^0.469.0",
     "react": "^18.3.1",
