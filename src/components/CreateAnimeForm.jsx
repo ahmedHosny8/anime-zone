@@ -1,12 +1,18 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AnimeContext } from '../context/anime-context';
 import Button from './Button';
 
 function CreateAnimeForm() {
+  const { addAnime } = useContext(AnimeContext);
+
   const [formData, setFormData] = useState({
     title: '',
     desc: '',
     img: '',
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,7 +27,10 @@ function CreateAnimeForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     console.log('Do Something');
+    addAnime(formData);
+    navigate('/');
   };
 
   return (

@@ -18,6 +18,22 @@ function AnimeContextProvider({ children }) {
     }
   }, []);
 
+  const addAnime = async (animeObj) => {
+    try {
+      const res = await axios.post(
+        'http://localhost:4000/animeList/',
+        animeObj
+      );
+      console.log(res.data);
+
+      const updatedAnimeList = [...animeList, res.data];
+
+      setAnimeList(updatedAnimeList);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   const deleteAnimeById = async (id) => {
     try {
       await axios.delete(`http://localhost:4000/animeList/${id}`);
@@ -35,6 +51,7 @@ function AnimeContextProvider({ children }) {
   const valueToShare = {
     animeList,
     getAnimeList,
+    addAnime,
     deleteAnimeById,
   };
 
