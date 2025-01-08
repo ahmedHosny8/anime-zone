@@ -10,7 +10,7 @@ function AnimeContextProvider({ children }) {
   const getAnimeList = useCallback(async () => {
     try {
       const res = await axios.get('http://localhost:4000/animeList/');
-      console.log(res.data);
+      // console.log(res.data);
 
       setAnimeList(res.data);
     } catch (err) {
@@ -20,8 +20,7 @@ function AnimeContextProvider({ children }) {
 
   const deleteAnimeById = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:4000/animeList/${id}`);
-      console.log(res.data);
+      await axios.delete(`http://localhost:4000/animeList/${id}`);
 
       const updatedAnimeList = animeList.filter((anime) => {
         return anime.id !== id;

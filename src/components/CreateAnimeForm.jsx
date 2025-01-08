@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from './Button';
 
-function AnimeDataForm() {
+function CreateAnimeForm() {
   const [formData, setFormData] = useState({
     title: '',
     desc: '',
@@ -84,4 +84,4 @@ function AnimeDataForm() {
   );
 }
 
-export default AnimeDataForm;
+export default CreateAnimeForm;

@@ -1,4 +1,4 @@
-import AnimeDataForm from '../components/AnimeDataForm';
+import CreateAnimeForm from '../components/CreateAnimeForm';
 
 function CreatePage() {
   return (
@@ -9,7 +9,7 @@ function CreatePage() {
           <br />
           <span className="text-brand">Anime List</span>
         </h1>
-        <AnimeDataForm />
+        <CreateAnimeForm />
       </div>
     </section>
   );
