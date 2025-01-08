@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types';
 import { Pencil, Trash2 } from 'lucide-react';
+import { useContext } from 'react';
+import { AnimeContext } from '../context/anime-context';
 import Button from './Button';
 
 function AnimeCard({ anime }) {
+  const { deleteAnimeById } = useContext(AnimeContext);
+
   return (
     <article className="p-4 grid grid-cols-3 items-center bg-white border border-gray-200/80 rounded-2xl overflow-hidden shadow-2xl shadow-gray-500/10">
       <img
@@ -20,7 +24,7 @@ function AnimeCard({ anime }) {
         <Button type="secondary" to="/edit">
           <Pencil size={16} className="mr-1 mb-0.5" /> Edit
         </Button>
-        <Button type="warning">
+        <Button type="warning" onClick={() => deleteAnimeById(anime.id)}>
           <Trash2 size={16} className="mr-1 mb-0.5" /> Delete
         </Button>
       </div>

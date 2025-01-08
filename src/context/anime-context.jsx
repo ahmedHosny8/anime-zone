@@ -9,7 +9,7 @@ function AnimeContextProvider({ children }) {
 
   const getAnimeList = useCallback(async () => {
     try {
-      const res = await axios.get('http://localhost:4000/animeList');
+      const res = await axios.get('http://localhost:4000/animeList/');
       console.log(res.data);
 
       setAnimeList(res.data);
@@ -18,9 +18,25 @@ function AnimeContextProvider({ children }) {
     }
   }, []);
 
+  const deleteAnimeById = async (id) => {
+    try {
+      const res = await axios.delete(`http://localhost:4000/animeList/${id}`);
+      console.log(res.data);
+
+      const updatedAnimeList = animeList.filter((anime) => {
+        return anime.id !== id;
+      });
+
+      setAnimeList(updatedAnimeList);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   const valueToShare = {
     animeList,
     getAnimeList,
+    deleteAnimeById,
   };
 
   return (
