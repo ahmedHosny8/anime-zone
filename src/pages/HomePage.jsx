@@ -1,27 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { AnimeContext } from '../context/anime-context';
 import { Link } from 'react-router-dom';
 import { Plus } from 'lucide-react';
-import axios from 'axios';
 import AnimeCard from '../components/AnimeCard';
 import pikachuImage from '../assets/pikachu.png';
 
 function HomePage() {
-  const [animeList, setAnimeList] = useState([]);
-
-  const getAnimeList = async () => {
-    try {
-      const res = await axios.get('http://localhost:4000/animeList');
-      // console.log(res.data);
-
-      setAnimeList(res.data);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  const { animeList, getAnimeList } = useContext(AnimeContext);
 
   useEffect(() => {
     getAnimeList();
-  }, []);
+  }, [getAnimeList]);
 
   const renderedAnimeList = animeList.map((anime) => {
     return (
