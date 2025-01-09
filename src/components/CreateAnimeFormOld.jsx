@@ -1,35 +1,46 @@
-import { useContext } from 'react';
-import { useForm } from 'react-hook-form';
+import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AnimeContext } from '../context/anime-context';
 import Button from './Button';
 
 function CreateAnimeForm() {
   const { addAnime } = useContext(AnimeContext);
 
-  const { register, handleSubmit, formState } = useForm();
+  const [formData, setFormData] = useState({
+    title: '',
+    desc: '',
+    img: '',
+  });
 
-  const { errors } = formState;
-  console.log(errors);
+  const navigate = useNavigate();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    const updatedFormData = {
+      ...formData,
+      [name]: value,
+    };
+
+    setFormData(updatedFormData);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
     const dataToSend = {
-      ...data,
+      ...formData,
       userId: '01',
     };
     console.log(dataToSend);
 
     addAnime(dataToSend);
-  };
-
-  const onError = (errors) => {
-    console.log(errors);
+    navigate('/');
   };
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit, onError)}
+      onSubmit={handleSubmit}
       className="min-w-xs max-w-md mx-auto py-8 px-4 flex flex-col gap-4 bg-white border border-gray-200/80 rounded-2xl overflow-hidden shadow-2xl shadow-gray-500/10"
     >
       <div className="flex flex-col gap-1">
@@ -38,23 +49,13 @@ function CreateAnimeForm() {
         </label>
         <input
           id="title"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
           type="text"
           className="input input-bordered grow"
-          {...register('title', {
-            required: 'This field is required',
-            minLength: {
-              value: 2,
-              message: 'Must be at least 2 characters',
-            },
-            maxLength: {
-              value: 16,
-              message: 'Maximum number of characters 16',
-            },
-          })}
         />
-        {errors.title && (
-          <span className="text-red-500 text-sm">{errors.title.message}</span>
-        )}
+        <span className="text-red-500 text-sm">Some error</span>
       </div>
 
       <div className="flex flex-col gap-1">
@@ -63,15 +64,13 @@ function CreateAnimeForm() {
         </label>
         <textarea
           id="desc"
+          name="desc"
+          value={formData.desc}
+          onChange={handleChange}
           type="text"
           className="textarea textarea-bordered textarea-lg w-full"
-          {...register('desc', {
-            required: 'This field is required',
-          })}
         />
-        {errors.desc && (
-          <span className="text-red-500 text-sm">{errors.desc.message}</span>
-        )}
+        <span className="text-red-500 text-sm">Some error</span>
       </div>
 
       <div className="flex flex-col gap-1">
@@ -80,15 +79,13 @@ function CreateAnimeForm() {
         </label>
         <input
           id="img"
+          name="img"
+          value={formData.img}
+          onChange={handleChange}
           type="text"
           className="input input-bordered grow"
-          {...register('img', {
-            required: 'This field is required',
-          })}
         />
-        {errors.img && (
-          <span className="text-red-500 text-sm">{errors.img.message}</span>
-        )}
+        <span className="text-red-500 text-sm">Some error</span>
       </div>
 
       <div className="mt-4 flex gap-4 justify-end">
