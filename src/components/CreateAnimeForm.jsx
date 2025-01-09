@@ -28,8 +28,13 @@ function CreateAnimeForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log('Do Something');
-    addAnime(formData);
+    const dataToSend = {
+      ...formData,
+      userId: '01',
+    };
+    console.log(dataToSend);
+
+    addAnime(dataToSend);
     navigate('/');
   };
 
