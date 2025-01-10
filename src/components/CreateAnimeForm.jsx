@@ -37,8 +37,8 @@ function CreateAnimeForm() {
           Title
         </label>
         <input
-          id="title"
           type="text"
+          id="title"
           className="input input-bordered grow"
           {...register('title', {
             required: 'This field is required',
@@ -62,11 +62,15 @@ function CreateAnimeForm() {
           Description
         </label>
         <textarea
-          id="desc"
           type="text"
+          id="desc"
           className="textarea textarea-bordered textarea-lg w-full"
           {...register('desc', {
             required: 'This field is required',
+            minLength: {
+              value: 16,
+              message: 'Must be at least 16 characters',
+            },
           })}
         />
         {errors.desc && (
@@ -79,8 +83,8 @@ function CreateAnimeForm() {
           Image URL
         </label>
         <input
-          id="img"
           type="text"
+          id="img"
           className="input input-bordered grow"
           {...register('img', {
             required: 'This field is required',

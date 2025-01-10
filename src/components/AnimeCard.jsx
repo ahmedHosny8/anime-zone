@@ -1,17 +1,25 @@
+import { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Pencil, Trash2 } from 'lucide-react';
-import { useContext } from 'react';
 import { AnimeContext } from '../context/anime-context';
 import Button from './Button';
+import dummyImage from '../assets/dummy-image.jpg';
 
 function AnimeCard({ anime }) {
   const { deleteAnimeById } = useContext(AnimeContext);
+
+  const [imageSrc, setImageSrc] = useState(anime.img);
+
+  const handleImageFailsToLoadError = () => {
+    setImageSrc(dummyImage);
+  };
 
   return (
     <article className="p-4 grid grid-cols-3 items-center bg-white border border-gray-200/80 rounded-2xl overflow-hidden shadow-2xl shadow-gray-500/10">
       <img
         className="h-40 w-full rounded-lg object-cover object-center"
-        src={anime.img}
+        src={imageSrc}
+        onError={handleImageFailsToLoadError}
         alt="Anime Image"
       />
 
