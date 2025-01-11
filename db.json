@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "email": "Ahmed@mail.com",
+      "password": "$2a$10$97Y.EEx8N0.tsh4EvHxId.PPsQoaBPE2ar7/cp/.yYTmOCUC/Qls6",
+      "id": 1
+    },
+    {
+      "email": "Ali@mail.com",
+      "password": "$2a$10$CyqiS9sTAL2QbeV2GL43A.VBX/TKJ2kDoPq3QS.W0DktOmDvrXS7q",
+      "id": 2
+    }
+  ],
   "animeList": [
     {
       "id": "1",
