@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server db.json -m ./node_modules/json-server-auth"
+    "server": "json-server -p 4000 --watch db.json"
   },
   "dependencies": {
     "axios": "^1.7.9",
@@ -31,8 +31,6 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
-    "json-server": "^1.0.0-beta.3",
-    "json-server-auth": "^2.1.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.5"
