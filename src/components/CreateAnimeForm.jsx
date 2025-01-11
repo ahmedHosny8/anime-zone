@@ -11,6 +11,8 @@ function CreateAnimeForm() {
   const { errors } = formState;
   console.log(errors);
 
+  // Only called if there is NO validation error
+  // It's going to receve the data collected from the form automatically
   const onSubmit = (data) => {
     console.log(data);
 
@@ -23,8 +25,10 @@ function CreateAnimeForm() {
     addAnime(dataToSend);
   };
 
+  // Called if an validation error found
+  // It's going to receve the errors object from validation process
   const onError = (errors) => {
-    console.log(errors);
+    console.log(errors); // {title: {type: required, message: "This field is required", ref: ...}}
   };
 
   return (
@@ -46,10 +50,6 @@ function CreateAnimeForm() {
               value: 2,
               message: 'Must be at least 2 characters',
             },
-            maxLength: {
-              value: 16,
-              message: 'Maximum number of characters 16',
-            },
           })}
         />
         {errors.title && (
@@ -67,10 +67,6 @@ function CreateAnimeForm() {
           className="textarea textarea-bordered textarea-lg w-full"
           {...register('desc', {
             required: 'This field is required',
-            minLength: {
-              value: 16,
-              message: 'Must be at least 16 characters',
-            },
           })}
         />
         {errors.desc && (
