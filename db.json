@@ -34,6 +34,24 @@
       "password": "$2a$10$tdhDkAD7WJUMMV0WQKq.4ed9LEkt82cKbyulf1LrYiwIJnbubDeRW",
       "name": "ahmed",
       "id": 6
+    },
+    {
+      "email": "ahmed77hosny@gmail.com",
+      "password": "$2a$10$pa4iBL5yxgAck6vkRJ.ua.0toUFgY.jepCfAFr9tqb66U07GgXDqS",
+      "name": "ahmed",
+      "id": 7
+    },
+    {
+      "email": "ahmed7hosny@gmail.com",
+      "password": "$2a$10$RtzvBkBNHwFpT5MtEm4Ph.lB2XIpXHn7qIsTQPXXt1w.HCTXkO4IW",
+      "name": "ahmed",
+      "id": 8
+    },
+    {
+      "email": "ahmedhosny@gmail.com",
+      "password": "$2a$10$O1ItiyuNuAgkzmvdRazVhuStcO6P.VjbX63wfHisxl/XqXV8/ClAG",
+      "name": "ahmed",
+      "id": 9
     }
   ],
   "animeList": [

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import Button from './Button';
@@ -5,10 +6,14 @@ import Button from './Button';
 // Email regex: /\S+@\S+\.\S+/
 
 function SignupForm() {
+  const [loading, setLoading] = useState(false);
+
   const { register, handleSubmit, formState, getValues, setError } = useForm();
   const { errors } = formState;
 
   const createUser = async (userData) => {
+    setLoading(true);
+
     try {
       const res = await axios.post('http://localhost:4000/users', userData);
       console.log(res.data);
@@ -18,6 +23,8 @@ function SignupForm() {
         type: 'server',
         message: error.response.data,
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -122,7 +129,9 @@ function SignupForm() {
       </div>
 
       <div className="mt-4 flex justify-center">
-        <Button type="primary">Sign up</Button>
+        <Button type={loading ? 'disabled' : 'primary'} disabled={loading}>
+          {loading ? 'Creating' : 'Sign up'}
+        </Button>
       </div>
 
       <div className="mt-2 flex items-center justify-center gap-2">
