@@ -1,69 +1,16 @@
 {
   "users": [
     {
-      "email": "Ahmed@mail.com",
-      "password": "$2a$10$97Y.EEx8N0.tsh4EvHxId.PPsQoaBPE2ar7/cp/.yYTmOCUC/Qls6",
+      "email": "ahmed707hosny@gmail.com",
+      "password": "$2a$10$cyYhkUZ/1nnWMpRpo.FrrOH8QmUq2q3MzFr24q15ssyl8QyRAPqOW",
+      "name": "Ahmed Hosny",
       "id": 1
     },
     {
-      "email": "Ali@mail.com",
-      "password": "$2a$10$CyqiS9sTAL2QbeV2GL43A.VBX/TKJ2kDoPq3QS.W0DktOmDvrXS7q",
+      "email": "ahmed606hosny@gmail.com",
+      "password": "$2a$10$lBlaFwOD1DUv1mvmHupD/uwiBOhFgnlrom7uSp6kSIitOfintJq96",
+      "name": "Ahmed Hosny",
       "id": 2
-    },
-    {
-      "email": "aasdfgg@gmail.net",
-      "password": "$2a$10$49ywxpUk9mFBPnMO9j403O03j/zNe3HJ8mAntfUzmDbY.cWwy2qTu",
-      "name": "ahmed",
-      "passwordConfirm": "100200300",
-      "id": 3
-    },
-    {
-      "email": "asdfgg@gmail.net",
-      "password": "$2a$10$I1gFTHFA4j.M7ud3GL7Lpee4844hWrHyDuleb2WRsY9AaMtJGgU5W",
-      "name": "ahmed",
-      "id": 4
-    },
-    {
-      "email": "ahmed707hosny@gmail.com",
-      "password": "$2a$10$CroCgoTT/rXSnCwXxJtyIe0OGrIw52GDquTJmlJeApfUFqFDwOxBO",
-      "name": "ahmed",
-      "id": 5
-    },
-    {
-      "email": "ahmed777hosny@gmail.com",
-      "password": "$2a$10$tdhDkAD7WJUMMV0WQKq.4ed9LEkt82cKbyulf1LrYiwIJnbubDeRW",
-      "name": "ahmed",
-      "id": 6
-    },
-    {
-      "email": "ahmed77hosny@gmail.com",
-      "password": "$2a$10$pa4iBL5yxgAck6vkRJ.ua.0toUFgY.jepCfAFr9tqb66U07GgXDqS",
-      "name": "ahmed",
-      "id": 7
-    },
-    {
-      "email": "ahmed7hosny@gmail.com",
-      "password": "$2a$10$RtzvBkBNHwFpT5MtEm4Ph.lB2XIpXHn7qIsTQPXXt1w.HCTXkO4IW",
-      "name": "ahmed",
-      "id": 8
-    },
-    {
-      "email": "ahmedhosny@gmail.com",
-      "password": "$2a$10$O1ItiyuNuAgkzmvdRazVhuStcO6P.VjbX63wfHisxl/XqXV8/ClAG",
-      "name": "ahmed",
-      "id": 9
-    },
-    {
-      "email": "707hosny@gmail.com",
-      "password": "$2a$10$z3IqXsVEBVKERgZu.saa2uB.gNd8.fYEfBYoxF7kTpBcbTMRzYuCC",
-      "name": "ahmed",
-      "id": 10
-    },
-    {
-      "email": "hosny@gmail.com",
-      "password": "$2a$10$Cppp8oe6p8B0N85njZBk.eAreuC9NCjbo5tUJONEONeX1DQVAZeB.",
-      "name": "ahmed",
-      "id": 11
     }
   ],
   "animeList": [

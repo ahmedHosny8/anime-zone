@@ -20,6 +20,10 @@ function SignupForm() {
     try {
       const res = await axios.post('http://localhost:4000/users', userData);
       console.log(res.data);
+
+      // Save the user to local storage
+      localStorage.setItem('user', JSON.stringify(res.data));
+
       navigate('/', { replace: true });
     } catch (error) {
       console.error(error.response.data); // Email already exists

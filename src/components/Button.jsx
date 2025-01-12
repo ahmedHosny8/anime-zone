@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function Button({ children, type, to, onClick, disabled }) {
-  console.log(disabled);
   const base =
     'flex items-center justify-center py-2 px-4 rounded-full font-semibold text-sm transition-all duration-300';
 
