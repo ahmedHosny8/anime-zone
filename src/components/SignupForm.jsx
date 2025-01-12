@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import Button from './Button';
@@ -11,12 +12,15 @@ function SignupForm() {
   const { register, handleSubmit, formState, getValues, setError } = useForm();
   const { errors } = formState;
 
+  const navigate = useNavigate();
+
   const createUser = async (userData) => {
     setLoading(true);
 
     try {
       const res = await axios.post('http://localhost:4000/users', userData);
       console.log(res.data);
+      navigate('/', { replace: true });
     } catch (error) {
       console.error(error.response.data); // Email already exists
       setError('email', {
