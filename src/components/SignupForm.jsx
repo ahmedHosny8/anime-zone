@@ -21,8 +21,8 @@ function SignupForm() {
       const res = await axios.post('http://localhost:4000/users', userData);
       console.log(res.data);
 
-      // Save the user to local storage
-      localStorage.setItem('user', JSON.stringify(res.data));
+      // Save accessToken inside localStorage
+      localStorage.setItem('authToken', res.data.accessToken);
 
       navigate('/', { replace: true });
     } catch (error) {
