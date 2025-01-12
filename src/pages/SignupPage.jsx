@@ -43,12 +43,6 @@ function SignupPage() {
         </div>
 
         <SignupForm />
-
-        {/* <form onSubmit={handleSubmit}>
-          <input type="text" />
-
-          <button>Create</button>
-        </form> */}
       </div>
     </section>
   );

@@ -9,6 +9,31 @@
       "email": "Ali@mail.com",
       "password": "$2a$10$CyqiS9sTAL2QbeV2GL43A.VBX/TKJ2kDoPq3QS.W0DktOmDvrXS7q",
       "id": 2
+    },
+    {
+      "email": "aasdfgg@gmail.net",
+      "password": "$2a$10$49ywxpUk9mFBPnMO9j403O03j/zNe3HJ8mAntfUzmDbY.cWwy2qTu",
+      "name": "ahmed",
+      "passwordConfirm": "100200300",
+      "id": 3
+    },
+    {
+      "email": "asdfgg@gmail.net",
+      "password": "$2a$10$I1gFTHFA4j.M7ud3GL7Lpee4844hWrHyDuleb2WRsY9AaMtJGgU5W",
+      "name": "ahmed",
+      "id": 4
+    },
+    {
+      "email": "ahmed707hosny@gmail.com",
+      "password": "$2a$10$CroCgoTT/rXSnCwXxJtyIe0OGrIw52GDquTJmlJeApfUFqFDwOxBO",
+      "name": "ahmed",
+      "id": 5
+    },
+    {
+      "email": "ahmed777hosny@gmail.com",
+      "password": "$2a$10$tdhDkAD7WJUMMV0WQKq.4ed9LEkt82cKbyulf1LrYiwIJnbubDeRW",
+      "name": "ahmed",
+      "id": 6
     }
   ],
   "animeList": [

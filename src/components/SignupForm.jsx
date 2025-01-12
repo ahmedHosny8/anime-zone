@@ -1,14 +1,32 @@
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import Button from './Button';
 
 // Email regex: /\S+@\S+\.\S+/
 
 function SignupForm() {
-  const { register, handleSubmit, formState, getValues } = useForm();
+  const { register, handleSubmit, formState, getValues, setError } = useForm();
   const { errors } = formState;
+
+  const createUser = async (userData) => {
+    try {
+      const res = await axios.post('http://localhost:4000/users', userData);
+      console.log(res.data);
+    } catch (error) {
+      console.error(error.response.data); // Email already exists
+      setError('email', {
+        type: 'server',
+        message: error.response.data,
+      });
+    }
+  };
 
   const onSubmit = (data) => {
     console.log(data);
+    const { name, email, password } = data;
+    const userData = { name, email, password };
+
+    createUser(userData);
   };
 
   const onError = (errors) => {
