@@ -9,6 +9,7 @@ function Button({ children, type, to, onClick }) {
     primary: base + ' bg-brand text-white hover:bg-brand-dark',
     secondary: base + ' bg-gray-100 hover:bg-gray-300',
     warning: base + ' bg-red-500 text-white hover:bg-red-700',
+    link: 'text-blue-500 font-semibold transition-all duration-300 hover:underline',
   };
 
   if (to)

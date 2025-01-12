@@ -18,7 +18,7 @@ function SignupForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit, onError)}
-      className="min-w-xs max-w-md mx-auto py-8 px-4 flex flex-col gap-4 bg-white border border-gray-200/80 rounded-2xl overflow-hidden shadow-2xl shadow-gray-500/10"
+      className="relative z-10 mt-40 min-w-xs max-w-md mx-auto py-10 px-4 flex flex-col gap-4 bg-white border border-gray-200/80 rounded-2xl overflow-hidden shadow-2xl shadow-gray-500/10"
     >
       <div className="flex flex-col gap-1">
         <label htmlFor="name" className="font-semibold">
@@ -103,8 +103,15 @@ function SignupForm() {
         )}
       </div>
 
-      <div className="mt-4 flex gap-4 justify-end">
+      <div className="mt-4 flex justify-center">
         <Button type="primary">Sign up</Button>
+      </div>
+
+      <div className="mt-2 flex items-center justify-center gap-2">
+        <p>Already have an account?</p>
+        <Button to="/login" type="link">
+          Login
+        </Button>
       </div>
     </form>
   );
