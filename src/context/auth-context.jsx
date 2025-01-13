@@ -47,10 +47,17 @@ function AuthContextProvider({ children }) {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('user');
+    setIsLoggedIn(false);
+  };
+
   const valueToShare = {
     isLoggedIn,
     isLoading,
     createUser,
+    handleLogout,
   };
 
   return (

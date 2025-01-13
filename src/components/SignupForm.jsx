@@ -112,26 +112,25 @@ function SignupForm() {
       </div>
 
       <div className="mt-4 flex justify-center gap-4">
-        <button
+        <Button
           type="reset"
           disabled={isLoading}
-          className={`flex items-center justify-center py-2 px-4 rounded-full font-semibold text-sm transition-all duration-300 ${
-            isLoading
-              ? 'bg-gray-200'
-              : 'text-white bg-gray-600 hover:bg-gray-800'
-          }`}
+          variation={isLoading ? 'disabled' : 'accent'}
         >
-          Reset
-        </button>
+          {isLoading ? 'Creating' : 'Reset'}
+        </Button>
 
-        <Button disabled={isLoading} type={isLoading ? 'disabled' : 'primary'}>
+        <Button
+          disabled={isLoading}
+          variation={isLoading ? 'disabled' : 'primary'}
+        >
           {isLoading ? 'Creating' : 'Sign up'}
         </Button>
       </div>
 
       <div className="mt-2 flex items-center justify-center gap-2">
         <p>Already have an account?</p>
-        <Button to="/login" type="link">
+        <Button to="/login" variation="link">
           Login
         </Button>
       </div>
