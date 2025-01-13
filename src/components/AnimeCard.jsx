@@ -31,7 +31,7 @@ function AnimeCard({ anime }) {
         <p className="">{anime.desc.slice(0, 48)}</p>
       </div>
 
-      {userInfo.id === anime.user && (
+      {userInfo?.id === anime.user && (
         <div className="col-span-3 mt-4 grid grid-cols-2 gap-2">
           <Button variation="secondary" to="/edit">
             <Pencil size={16} className="mr-1 mb-0.5" /> Edit

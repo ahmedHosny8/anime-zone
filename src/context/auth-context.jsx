@@ -8,7 +8,7 @@ const AuthContext = createContext();
 function AuthContextProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [userInfo, setUserInfo] = useState({});
+  const [userInfo, setUserInfo] = useState(null);
 
   const navigate = useNavigate();
 
@@ -37,6 +37,7 @@ function AuthContextProvider({ children }) {
       localStorage.setItem('user', JSON.stringify(res.data.user));
 
       setIsLoggedIn(true);
+      setUserInfo(res.data.user);
 
       navigate('/', { replace: true });
     } catch (error) {
@@ -54,6 +55,7 @@ function AuthContextProvider({ children }) {
     localStorage.removeItem('authToken');
     localStorage.removeItem('user');
     setIsLoggedIn(false);
+    setUserInfo({});
   };
 
   const valueToShare = {

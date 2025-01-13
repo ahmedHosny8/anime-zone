@@ -6,13 +6,16 @@ import Button from './Button';
 import onePieceLogo from '../assets/one-piece.svg';
 
 function Header() {
-  const { isLoggedIn, handleLogout } = useContext(AuthContext);
+  const { isLoggedIn, userInfo, handleLogout } = useContext(AuthContext);
+  console.log(userInfo);
   console.log(isLoggedIn);
 
   return (
     <header className="bg-white px-4 py-2 shadow-xl shadow-gray-200/20">
       <div className="max-w-screen-lg mx-auto">
         <div className="grid grid-cols-3 justify-items-center items-center">
+          {userInfo && <p className="font-bold text-sm">{userInfo?.name}</p>}
+
           <Link to="/" className="col-start-2">
             <img src={onePieceLogo} alt="Pizza Logo" className="h-20" />
           </Link>
