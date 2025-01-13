@@ -12,6 +12,8 @@ function HomePage() {
     getAnimeList();
   }, [getAnimeList]);
 
+  console.log(animeList);
+
   const renderedAnimeList = animeList.map((anime) => {
     return (
       <li key={anime.id}>
