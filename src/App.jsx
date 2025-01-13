@@ -7,10 +7,19 @@ import CreatePage from './pages/CreatePage';
 import EditPage from './pages/EditPage';
 import NotFoundPage from './pages/NotFoundPage';
 
+import AuthContextProvider from './context/auth-context';
+import AnimeContextProvider from './context/anime-context';
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root />,
+    element: (
+      <AuthContextProvider>
+        <AnimeContextProvider>
+          <Root />
+        </AnimeContextProvider>
+      </AuthContextProvider>
+    ),
     children: [
       {
         index: true,

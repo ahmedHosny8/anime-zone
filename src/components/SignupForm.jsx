@@ -1,47 +1,22 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../context/auth-context';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
 import Button from './Button';
 
 // Email regex: /\S+@\S+\.\S+/
 
 function SignupForm() {
-  const [loading, setLoading] = useState(false);
+  const { isLoading, createUser } = useContext(AuthContext);
 
   const { register, handleSubmit, formState, getValues, setError } = useForm();
   const { errors } = formState;
-
-  const navigate = useNavigate();
-
-  const createUser = async (userData) => {
-    setLoading(true);
-
-    try {
-      const res = await axios.post('http://localhost:4000/users', userData);
-      console.log(res.data);
-
-      // Save accessToken inside localStorage
-      localStorage.setItem('authToken', res.data.accessToken);
-
-      navigate('/', { replace: true });
-    } catch (error) {
-      console.error(error.response.data); // Email already exists
-      setError('email', {
-        type: 'server',
-        message: error.response.data,
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const onSubmit = (data) => {
     console.log(data);
     const { name, email, password } = data;
     const userData = { name, email, password };
 
-    createUser(userData);
+    createUser(userData, setError);
   };
 
   const onError = (errors) => {
@@ -137,8 +112,8 @@ function SignupForm() {
       </div>
 
       <div className="mt-4 flex justify-center">
-        <Button type={loading ? 'disabled' : 'primary'} disabled={loading}>
-          {loading ? 'Creating' : 'Sign up'}
+        <Button disabled={isLoading} type={isLoading ? 'disabled' : 'primary'}>
+          {isLoading ? 'Creating' : 'Sign up'}
         </Button>
       </div>
 

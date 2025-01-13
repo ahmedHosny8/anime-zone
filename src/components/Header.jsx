@@ -1,9 +1,14 @@
+import { useContext } from 'react';
+import { AuthContext } from '../context/auth-context';
 import { Link } from 'react-router-dom';
 import { UserRound } from 'lucide-react';
 import Button from './Button';
 import onePieceLogo from '../assets/one-piece.svg';
 
 function Header() {
+  const { isLoggedIn } = useContext(AuthContext);
+  console.log(isLoggedIn);
+
   return (
     <header className="bg-white px-4 py-2 shadow-xl shadow-gray-200/20">
       <div className="max-w-screen-lg mx-auto">
@@ -15,9 +20,13 @@ function Header() {
           <nav className="col-start-3 justify-self-end">
             <ul>
               <li>
-                <Button type="secondary" to="/login">
-                  <UserRound size={16} className="mr-1 mb-0.5" /> Login
-                </Button>
+                {isLoggedIn ? (
+                  'Logout'
+                ) : (
+                  <Button type="secondary" to="/login">
+                    <UserRound size={16} className="mr-1 mb-0.5" /> Login
+                  </Button>
+                )}
               </li>
             </ul>
           </nav>
