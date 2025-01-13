@@ -18,7 +18,7 @@ function CreateAnimeForm() {
 
     const dataToSend = {
       ...data,
-      userId: '01',
+      userId: 1,
     };
     console.log(dataToSend);
 
@@ -92,10 +92,10 @@ function CreateAnimeForm() {
       </div>
 
       <div className="mt-4 flex gap-4 justify-end">
-        <Button to="/" type="secondary">
+        <Button to="/" variation="secondary">
           Cancel
         </Button>
-        <Button type="primary">Add</Button>
+        <Button variation="primary">Add</Button>
       </div>
     </form>
   );

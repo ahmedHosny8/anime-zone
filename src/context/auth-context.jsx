@@ -8,6 +8,7 @@ const AuthContext = createContext();
 function AuthContextProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [userInfo, setUserInfo] = useState({});
 
   const navigate = useNavigate();
 
@@ -18,6 +19,8 @@ function AuthContextProvider({ children }) {
 
     if (authToken) {
       setIsLoggedIn(true);
+
+      setUserInfo(JSON.parse(localStorage.getItem('user')));
     }
   }, []);
 
@@ -56,6 +59,7 @@ function AuthContextProvider({ children }) {
   const valueToShare = {
     isLoggedIn,
     isLoading,
+    userInfo,
     createUser,
     handleLogout,
   };

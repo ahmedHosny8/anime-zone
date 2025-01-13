@@ -2,11 +2,14 @@ import { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Pencil, Trash2 } from 'lucide-react';
 import { AnimeContext } from '../context/anime-context';
+import { AuthContext } from '../context/auth-context';
 import Button from './Button';
 import dummyImage from '../assets/dummy-image.jpg';
 
 function AnimeCard({ anime }) {
   const { deleteAnimeById } = useContext(AnimeContext);
+  const { userInfo } = useContext(AuthContext);
+  // console.log(userInfo);
 
   const [imageSrc, setImageSrc] = useState(anime.img);
 
@@ -28,14 +31,16 @@ function AnimeCard({ anime }) {
         <p className="">{anime.desc.slice(0, 48)}</p>
       </div>
 
-      <div className="col-span-3 mt-4 grid grid-cols-2 gap-2">
-        <Button variation="secondary" to="/edit">
-          <Pencil size={16} className="mr-1 mb-0.5" /> Edit
-        </Button>
-        <Button variation="warning" onClick={() => deleteAnimeById(anime.id)}>
-          <Trash2 size={16} className="mr-1 mb-0.5" /> Delete
-        </Button>
-      </div>
+      {userInfo.id === anime.user && (
+        <div className="col-span-3 mt-4 grid grid-cols-2 gap-2">
+          <Button variation="secondary" to="/edit">
+            <Pencil size={16} className="mr-1 mb-0.5" /> Edit
+          </Button>
+          <Button variation="warning" onClick={() => deleteAnimeById(anime.id)}>
+            <Trash2 size={16} className="mr-1 mb-0.5" /> Delete
+          </Button>
+        </div>
+      )}
     </article>
   );
 }
