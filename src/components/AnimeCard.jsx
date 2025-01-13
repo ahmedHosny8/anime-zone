@@ -29,10 +29,10 @@ function AnimeCard({ anime }) {
       </div>
 
       <div className="col-span-3 mt-4 grid grid-cols-2 gap-2">
-        <Button type="secondary" to="/edit">
+        <Button variation="secondary" to="/edit">
           <Pencil size={16} className="mr-1 mb-0.5" /> Edit
         </Button>
-        <Button type="warning" onClick={() => deleteAnimeById(anime.id)}>
+        <Button variation="warning" onClick={() => deleteAnimeById(anime.id)}>
           <Trash2 size={16} className="mr-1 mb-0.5" /> Delete
         </Button>
       </div>

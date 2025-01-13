@@ -21,11 +21,11 @@ function Header() {
             <ul>
               <li>
                 {isLoggedIn ? (
-                  <Button onClick={handleLogout} variation="secondary">
+                  <Button onClick={handleLogout} variation="accent">
                     Logout
                   </Button>
                 ) : (
-                  <Button variation="accent" to="/login">
+                  <Button variation="secondary" to="/login">
                     <UserRound size={16} className="mr-1 mb-0.5" /> Login
                   </Button>
                 )}
