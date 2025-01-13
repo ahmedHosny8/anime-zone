@@ -11,7 +11,21 @@
       "password": "$2a$10$lBSMp.pWUVn9tzN7ALedeu6MCDTcTU9fWN7UHKjhuiKhOVhODIQV2",
       "name": "Ahmed Hosny",
       "id": 2
+    },
+    {
+      "email": "ahmeosny@gmail.com",
+      "password": "$2a$10$oIvHVh/T61yQVWMubkTPH.CPcclkbK/aTbO1ULK2zpHlJTyE.uB.q",
+      "name": "Ahmed Hosny",
+      "id": 3
     }
   ],
-  "animeList": []
+  "animeList": [
+    {
+      "id": 3,
+      "title": "Naruto",
+      "desc": "Moments before Naruto Uzumaki's birth, a huge demon known as the Nine-Tailed Fox attacked Konohagakure.",
+      "img": "https://cdn.myanimelist.net/images/anime/1141/142503.jpg",
+      "userId": 1
+    }
+  ]
 }

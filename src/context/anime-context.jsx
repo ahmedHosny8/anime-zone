@@ -35,18 +35,12 @@ function AnimeContextProvider({ children }) {
   };
 
   const deleteAnimeById = async (id) => {
-    console.log('inside deleteAnime by id fund');
-    console.log(id);
-
     try {
-      const res = await axios.delete(`http://localhost:4000/animeList/${id}`);
-      console.log(res.data);
+      await axios.delete(`http://localhost:4000/animeList/${id}`);
 
       const updatedAnimeList = animeList.filter((anime) => {
         return anime.id !== id;
       });
-
-      console.log(updatedAnimeList);
 
       setAnimeList(updatedAnimeList);
     } catch (err) {
