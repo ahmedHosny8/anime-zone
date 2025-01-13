@@ -15,7 +15,6 @@ function AuthContextProvider({ children }) {
   // (immediately after first render)
   useEffect(() => {
     const authToken = localStorage.getItem('authToken');
-    console.log(authToken);
 
     if (authToken) {
       setIsLoggedIn(true);
@@ -31,6 +30,8 @@ function AuthContextProvider({ children }) {
 
       // Save accessToken inside localStorage
       localStorage.setItem('authToken', res.data.accessToken);
+      // Save user data inside localStorage
+      localStorage.setItem('user', JSON.stringify(res.data.user));
 
       setIsLoggedIn(true);
 

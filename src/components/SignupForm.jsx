@@ -111,7 +111,19 @@ function SignupForm() {
         )}
       </div>
 
-      <div className="mt-4 flex justify-center">
+      <div className="mt-4 flex justify-center gap-4">
+        <button
+          type="reset"
+          disabled={isLoading}
+          className={`flex items-center justify-center py-2 px-4 rounded-full font-semibold text-sm transition-all duration-300 ${
+            isLoading
+              ? 'bg-gray-200'
+              : 'text-white bg-gray-600 hover:bg-gray-800'
+          }`}
+        >
+          Reset
+        </button>
+
         <Button disabled={isLoading} type={isLoading ? 'disabled' : 'primary'}>
           {isLoading ? 'Creating' : 'Sign up'}
         </Button>

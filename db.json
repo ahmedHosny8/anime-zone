@@ -2,15 +2,9 @@
   "users": [
     {
       "email": "ahmed707hosny@gmail.com",
-      "password": "$2a$10$5TZqj./krGpZ8DEEDmBbAucz8Mj0iKt9CRm1yqjgEKAEhXwo4cpFy",
+      "password": "$2a$10$q0BDqceUp4/OYO1DkBHkZuUs7ZUayz9K8hYDXCjeDMuKBQPijXHji",
       "name": "Ahmed Hosny",
       "id": 1
-    },
-    {
-      "email": "ahmedhosny@gmail.com",
-      "password": "$2a$10$66/cxTJcfrYjRNKdE3OLS.Yv9M.1aLP0tDIhVr0Hp3.98yMIFUNeq",
-      "name": "Ahmed Hosny",
-      "id": 2
     }
   ],
   "animeList": [
