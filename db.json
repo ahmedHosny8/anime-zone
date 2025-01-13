@@ -5,6 +5,12 @@
       "password": "$2a$10$q0BDqceUp4/OYO1DkBHkZuUs7ZUayz9K8hYDXCjeDMuKBQPijXHji",
       "name": "Ahmed Hosny",
       "id": 1
+    },
+    {
+      "email": "ahmedhosny@gmail.com",
+      "password": "$2a$10$lBSMp.pWUVn9tzN7ALedeu6MCDTcTU9fWN7UHKjhuiKhOVhODIQV2",
+      "name": "Ahmed Hosny",
+      "id": 2
     }
   ],
   "animeList": [

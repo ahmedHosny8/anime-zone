@@ -6,7 +6,7 @@ import Button from './Button';
 import onePieceLogo from '../assets/one-piece.svg';
 
 function Header() {
-  const { isLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn, handleLogout } = useContext(AuthContext);
   console.log(isLoggedIn);
 
   return (
@@ -21,9 +21,11 @@ function Header() {
             <ul>
               <li>
                 {isLoggedIn ? (
-                  'Logout'
+                  <Button onClick={handleLogout} variation="secondary">
+                    Logout
+                  </Button>
                 ) : (
-                  <Button type="secondary" to="/login">
+                  <Button variation="accent" to="/login">
                     <UserRound size={16} className="mr-1 mb-0.5" /> Login
                   </Button>
                 )}
