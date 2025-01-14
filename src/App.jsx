@@ -6,6 +6,7 @@ import SignupPage from './pages/SignupPage';
 import CreatePage from './pages/CreatePage';
 import EditPage from './pages/EditPage';
 import NotFoundPage from './pages/NotFoundPage';
+import Gard from './components/Gard';
 
 const router = createBrowserRouter([
   {
@@ -18,19 +19,35 @@ const router = createBrowserRouter([
       },
       {
         path: '/login',
-        element: <LoginPage />,
+        element: (
+          <Gard page="login">
+            <LoginPage />
+          </Gard>
+        ),
       },
       {
         path: '/signup',
-        element: <SignupPage />,
+        element: (
+          <Gard page="signup">
+            <SignupPage />
+          </Gard>
+        ),
       },
       {
         path: '/create',
-        element: <CreatePage />,
+        element: (
+          <Gard page="create">
+            <CreatePage />
+          </Gard>
+        ),
       },
       {
         path: '/edit',
-        element: <EditPage />,
+        element: (
+          <Gard page="edit">
+            <EditPage />
+          </Gard>
+        ),
       },
       {
         path: '*',
