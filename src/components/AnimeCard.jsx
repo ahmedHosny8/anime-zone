@@ -18,7 +18,7 @@ function AnimeCard({ anime }) {
   };
 
   return (
-    <article className="p-4 grid grid-cols-3 items-center bg-white border border-gray-200/80 rounded-2xl overflow-hidden shadow-2xl shadow-gray-500/10">
+    <article className="relative p-4 grid grid-cols-3 items-center bg-white border border-gray-200/80 rounded-2xl overflow-hidden shadow-2xl shadow-gray-500/10">
       <img
         className="h-40 w-full rounded-lg object-cover object-center"
         src={imageSrc}
@@ -26,18 +26,23 @@ function AnimeCard({ anime }) {
         alt="Anime Image"
       />
 
-      <div className="col-span-2 ml-4">
-        <h1 className="mb-1 text-brand font-bold text-xl">{anime.title}</h1>
-        <p className="">{anime.desc.slice(0, 48)}</p>
+      <div className="col-span-2 h-full w-full py-4 px-4">
+        <h1 className="mt-5 mb-1 text-brand font-bold text-xl">
+          {anime.title}
+        </h1>
+        <p className="font-semibold text-sm">{anime.desc.slice(0, 48)}</p>
       </div>
 
       {userInfo?.id === anime.user && (
-        <div className="col-span-3 mt-4 grid grid-cols-2 gap-2">
-          <Button variation="secondary" to="/edit">
-            <Pencil size={16} className="mr-1 mb-0.5" /> Edit
+        <div className="absolute top-2 right-2 flex gap-2 items-center">
+          <Button variation="iconAccent" to="/edit">
+            <Pencil size={16} color="white" />
           </Button>
-          <Button variation="warning" onClick={() => deleteAnimeById(anime.id)}>
-            <Trash2 size={16} className="mr-1 mb-0.5" /> Delete
+          <Button
+            variation="iconWarning"
+            onClick={() => deleteAnimeById(anime.id)}
+          >
+            <Trash2 size={16} color="white" />
           </Button>
         </div>
       )}

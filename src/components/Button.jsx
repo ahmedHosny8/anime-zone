@@ -5,6 +5,9 @@ function Button({ children, variation, type, to, onClick, disabled }) {
   const base =
     'flex items-center justify-center py-2 px-4 rounded-full font-semibold text-sm transition-all duration-300';
 
+  const iconBase =
+    'h-11 w-11 flex items-center justify-center rounded-lg transition-all duration-300';
+
   const styles = {
     primary: base + ' text-white bg-brand hover:bg-brand-dark',
     secondary: base + ' bg-gray-100 hover:bg-gray-300',
@@ -12,6 +15,8 @@ function Button({ children, variation, type, to, onClick, disabled }) {
     warning: base + ' bg-red-500 text-white hover:bg-red-700',
     link: 'text-blue-500 font-semibold transition-all duration-300 hover:underline',
     disabled: base + ' bg-gray-200',
+    iconWarning: iconBase + ' bg-red-500 hover:bg-red-700',
+    iconAccent: iconBase + ' bg-gray-600 hover:bg-gray-800',
   };
 
   if (to)
