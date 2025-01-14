@@ -27,7 +27,7 @@ function AnimeCard({ anime }) {
       />
 
       <div className="col-span-2 h-full w-full py-4 px-4">
-        <h1 className="mt-5 mb-1 text-brand font-bold text-xl">
+        <h1 className="mt-6 mb-1 text-brand font-bold text-xl">
           {anime.title}
         </h1>
         <p className="font-semibold text-sm">{anime.desc.slice(0, 48)}</p>

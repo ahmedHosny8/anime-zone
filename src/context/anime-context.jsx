@@ -1,4 +1,5 @@
 import { createContext, useCallback, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
@@ -6,6 +7,9 @@ const AnimeContext = createContext();
 
 function AnimeContextProvider({ children }) {
   const [animeList, setAnimeList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const getAnimeList = useCallback(async () => {
     try {
@@ -19,6 +23,8 @@ function AnimeContextProvider({ children }) {
   }, []);
 
   const addAnime = async (animeObj) => {
+    setIsLoading(true);
+
     try {
       const res = await axios.post(
         'http://localhost:4000/animeList/',
@@ -29,12 +35,18 @@ function AnimeContextProvider({ children }) {
       const updatedAnimeList = [...animeList, res.data];
 
       setAnimeList(updatedAnimeList);
+
+      navigate('/');
     } catch (err) {
       console.error(err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const deleteAnimeById = async (id) => {
+    setIsLoading(true);
+
     try {
       await axios.delete(`http://localhost:4000/animeList/${id}`);
 
@@ -45,11 +57,14 @@ function AnimeContextProvider({ children }) {
       setAnimeList(updatedAnimeList);
     } catch (err) {
       console.error(err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const valueToShare = {
     animeList,
+    isLoading,
     getAnimeList,
     addAnime,
     deleteAnimeById,

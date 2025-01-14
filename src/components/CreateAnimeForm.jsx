@@ -1,10 +1,12 @@
 import { useContext } from 'react';
-import { useForm } from 'react-hook-form';
 import { AnimeContext } from '../context/anime-context';
+import { AuthContext } from '../context/auth-context';
+import { useForm } from 'react-hook-form';
 import Button from './Button';
 
 function CreateAnimeForm() {
-  const { addAnime } = useContext(AnimeContext);
+  const { addAnime, isLoading } = useContext(AnimeContext);
+  const { userInfo } = useContext(AuthContext);
 
   const { register, handleSubmit, formState } = useForm();
 
@@ -18,9 +20,8 @@ function CreateAnimeForm() {
 
     const dataToSend = {
       ...data,
-      userId: 1,
+      user: userInfo.id,
     };
-    console.log(dataToSend);
 
     addAnime(dataToSend);
   };
@@ -92,10 +93,15 @@ function CreateAnimeForm() {
       </div>
 
       <div className="mt-4 flex gap-4 justify-end">
-        <Button to="/" variation="secondary">
-          Cancel
+        <Button to="/" variation={isLoading ? 'disabled' : 'accent'}>
+          {isLoading ? 'Creating...' : 'Cancel'}
         </Button>
-        <Button variation="primary">Add</Button>
+        <Button
+          disabled={isLoading}
+          variation={isLoading ? 'disabled' : 'primary'}
+        >
+          {isLoading ? 'Creating...' : 'Add'}
+        </Button>
       </div>
     </form>
   );
