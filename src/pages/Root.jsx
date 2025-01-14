@@ -1,13 +1,20 @@
 import { Outlet } from 'react-router-dom';
 import Header from '../components/Header';
 
+import AuthContextProvider from '../context/auth-context';
+import AnimeContextProvider from '../context/anime-context';
+
 function Root() {
   return (
     <>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
+      <AuthContextProvider>
+        <AnimeContextProvider>
+          <Header />
+          <main>
+            <Outlet />
+          </main>
+        </AnimeContextProvider>
+      </AuthContextProvider>
     </>
   );
 }
