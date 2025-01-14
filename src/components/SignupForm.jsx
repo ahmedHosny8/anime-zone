@@ -6,7 +6,7 @@ import Button from './Button';
 // Email regex: /\S+@\S+\.\S+/
 
 function SignupForm() {
-  const { isLoading, createUser } = useContext(AuthContext);
+  const { isLoading, handleSignup } = useContext(AuthContext);
 
   const { register, handleSubmit, formState, getValues, setError } = useForm();
   const { errors } = formState;
@@ -16,7 +16,7 @@ function SignupForm() {
     const { name, email, password } = data;
     const userData = { name, email, password };
 
-    createUser(userData, setError);
+    handleSignup(userData, setError);
   };
 
   const onError = (errors) => {

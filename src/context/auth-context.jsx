@@ -24,7 +24,7 @@ function AuthContextProvider({ children }) {
     }
   }, []);
 
-  const createUser = async (userData, setError) => {
+  const handleSignup = async (userData, setError) => {
     setIsLoading(true);
 
     try {
@@ -51,6 +51,42 @@ function AuthContextProvider({ children }) {
     }
   };
 
+  const handleLogin = async (userData, setError) => {
+    setIsLoading(true);
+
+    try {
+      const res = await axios.post('http://localhost:4000/login', userData);
+      console.log(res.data);
+
+      // Save accessToken inside localStorage
+      localStorage.setItem('authToken', res.data.accessToken);
+      // Save user data inside localStorage
+      localStorage.setItem('user', JSON.stringify(res.data.user));
+
+      setIsLoggedIn(true);
+      setUserInfo(res.data.user);
+
+      navigate('/', { replace: true });
+    } catch (error) {
+      console.error(error);
+      console.error(error.response.data); // Incorrect password
+      if (error.response.data === 'Cannot find user') {
+        setError('email', {
+          type: 'server',
+          message: error.response.data,
+        });
+      }
+      if (error.response.data === 'Incorrect password') {
+        setError('password', {
+          type: 'server',
+          message: error.response.data,
+        });
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const handleLogout = () => {
     localStorage.removeItem('authToken');
     localStorage.removeItem('user');
@@ -62,7 +98,8 @@ function AuthContextProvider({ children }) {
     isLoggedIn,
     isLoading,
     userInfo,
-    createUser,
+    handleSignup,
+    handleLogin,
     handleLogout,
   };
 

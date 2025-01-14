@@ -6,13 +6,15 @@ import Button from './Button';
 // Email regex: /\S+@\S+\.\S+/
 
 function LoginForm() {
-  const { isLoading } = useContext(AuthContext);
+  const { isLoading, handleLogin } = useContext(AuthContext);
 
-  const { register, handleSubmit, formState } = useForm();
+  const { register, handleSubmit, formState, setError } = useForm();
   const { errors } = formState;
 
   const onSubmit = (data) => {
     console.log(data);
+
+    handleLogin(data, setError);
   };
 
   const onError = (errors) => {

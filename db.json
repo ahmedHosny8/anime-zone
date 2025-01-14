@@ -2,33 +2,15 @@
   "users": [
     {
       "email": "ahmed707hosny@gmail.com",
-      "password": "$2a$10$wJ.dvdRXPWizLAU64iOgHeXYPmxZWIQvL5IUb8lrXEEzuPny..0zW",
+      "password": "$2a$10$hxAO.OQW1HgkLBE.pivwlOwMxaJ5RzUmwqYyS965SZhSlqUahkVDC",
       "name": "Ahmed Hosny",
       "id": 1
     },
     {
-      "email": "ahmedosny@gmail.com",
-      "password": "$2a$10$HWN9w0NnCmpsUqs5wPRsM.TPGUFQmfGvFon7Kqk5cggOOBMDMlLkO",
-      "name": "Ahmed Hosny",
+      "email": "ahmed606hosny@gmail.com",
+      "password": "$2a$10$.s7LSzW4kbH07ezgFE/A8O0wsqAx1KzZe2/eSzKnkmHvtppvQYmFq",
+      "name": "ninja turtles",
       "id": 2
-    },
-    {
-      "email": "ahmeny@gmail.com",
-      "password": "$2a$10$a7X.24o9v5yoy1jvpuiOMO45zr63Pn7A.HG82tH3zQCtu30Rnyvve",
-      "name": "Ahmed Hosny",
-      "id": 3
-    },
-    {
-      "email": "ah7hosny@gmail.com",
-      "password": "$2a$10$5MWbhu5He2joF6jY3jGKEO86fd17eR0Hq0hHzzaGiW8qFiMvQ01w6",
-      "name": "Ahmed Hosny",
-      "id": 4
-    },
-    {
-      "email": "ahny@gmail.com",
-      "password": "$2a$10$4.vooOar8D47BMwX9S9t5ex8ASY.G7IU5.sjSPEkOz0sEonwXKzC6",
-      "name": "Ahmed Hosny",
-      "id": 5
     }
   ],
   "animeList": [
