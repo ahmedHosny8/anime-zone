@@ -2,37 +2,20 @@ import { useContext, useEffect } from 'react';
 import { AnimeContext } from '../context/anime-context';
 import { useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
 import Button from './Button';
 
 function EditAnimeForm() {
   const { id } = useParams();
   // console.log(id);
 
-  const { isLoading } = useContext(AnimeContext);
+  const { getAnimeById, isLoading } = useContext(AnimeContext);
 
   const { register, handleSubmit, formState, reset } = useForm();
   const { errors } = formState;
 
   useEffect(() => {
-    const getAnimeById = async () => {
-      try {
-        const res = await axios.get(`http://localhost:4000/animeList/${id}`);
-        // console.log(res.data);
-
-        const defaultValues = {
-          title: res.data.title,
-          desc: res.data.desc,
-          img: res.data.img,
-        };
-        reset(defaultValues);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    getAnimeById();
-  }, [id, reset]);
+    getAnimeById(id, reset);
+  }, [id, reset, getAnimeById]);
 
   const onSubmit = (data) => {
     console.log(data);

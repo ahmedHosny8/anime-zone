@@ -22,6 +22,22 @@ function AnimeContextProvider({ children }) {
     }
   }, []);
 
+  const getAnimeById = async (id, reset) => {
+    try {
+      const res = await axios.get(`http://localhost:4000/animeList/${id}`);
+      // console.log(res.data);
+
+      const defaultValues = {
+        title: res.data.title,
+        desc: res.data.desc,
+        img: res.data.img,
+      };
+      reset(defaultValues);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const addAnime = async (animeObj) => {
     setIsLoading(true);
 
@@ -66,6 +82,7 @@ function AnimeContextProvider({ children }) {
     animeList,
     isLoading,
     getAnimeList,
+    getAnimeById,
     addAnime,
     deleteAnimeById,
   };
