@@ -1,6 +1,7 @@
 import { createContext, useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 import PropTypes from 'prop-types';
 
 const AnimeContext = createContext();
@@ -51,9 +52,12 @@ function AnimeContextProvider({ children }) {
 
       setAnimeList(updatedAnimeList);
 
+      toast.success('Post successfully created');
+
       navigate('/');
     } catch (err) {
-      console.error(err);
+      console.error(err.message);
+      toast.error('Post could not be created');
     } finally {
       setIsLoading(false);
     }
@@ -78,9 +82,12 @@ function AnimeContextProvider({ children }) {
       });
       setAnimeList(updatedAnimeList);
 
+      toast.success('Post successfully edited');
+
       navigate('/');
     } catch (errors) {
-      console.error(errors);
+      console.error(errors.message);
+      toast.error('Post could not be edited');
     } finally {
       setIsLoading(false);
     }
@@ -96,8 +103,10 @@ function AnimeContextProvider({ children }) {
       });
 
       setAnimeList(updatedAnimeList);
+      toast.success('Post successfully deleted');
     } catch (err) {
-      console.error(err);
+      console.error(err.message);
+      toast.error('Post could not be deleted');
     } finally {
       setIsLoading(false);
     }
