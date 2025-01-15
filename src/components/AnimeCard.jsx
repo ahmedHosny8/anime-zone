@@ -35,7 +35,7 @@ function AnimeCard({ anime }) {
 
       {userInfo?.id === anime.user && (
         <div className="absolute top-2 right-2 flex gap-2 items-center">
-          <Button variation="iconAccent" to="/edit">
+          <Button variation="iconAccent" to={`/edit/${anime.id}`}>
             <Pencil size={16} color="white" />
           </Button>
           <Button

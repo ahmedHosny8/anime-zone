@@ -29,13 +29,6 @@
       "user": 2
     },
     {
-      "title": "Ahmed Hosny",
-      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "img": "jtrjrajrykrykrykk",
-      "user": 1,
-      "id": 4
-    },
-    {
       "title": "ahmed",
       "desc": "dqwfqwfqwff",
       "img": "qefqewfqf",
@@ -118,13 +111,6 @@
       "img": "rsltultulul",
       "user": 1,
       "id": 17
-    },
-    {
-      "title": "jnrtsjrskj",
-      "desc": "ryskryksry",
-      "img": "rsltultulul",
-      "user": 1,
-      "id": 18
     }
   ]
 }

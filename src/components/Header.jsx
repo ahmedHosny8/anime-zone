@@ -7,8 +7,8 @@ import onePieceLogo from '../assets/one-piece.svg';
 
 function Header() {
   const { isLoggedIn, userInfo, handleLogout } = useContext(AuthContext);
-  console.log(userInfo);
-  console.log(isLoggedIn);
+  // console.log(userInfo);
+  // console.log(isLoggedIn);
 
   return (
     <header className="bg-white px-4 py-2 shadow-xl shadow-gray-200/20">
