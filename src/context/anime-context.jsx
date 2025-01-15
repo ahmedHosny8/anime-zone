@@ -40,7 +40,6 @@ function AnimeContextProvider({ children }) {
 
   const addAnime = async (animeObj) => {
     setIsLoading(true);
-
     try {
       const res = await axios.post(
         'http://localhost:4000/animeList/',
@@ -60,9 +59,35 @@ function AnimeContextProvider({ children }) {
     }
   };
 
+  const editAnimeById = async (id, newTitle, newDesc, newImg) => {
+    setIsLoading(true);
+    try {
+      const res = await axios.patch(`http://localhost:4000/animeList/${id}`, {
+        title: newTitle,
+        desc: newDesc,
+        img: newImg,
+      });
+      console.log(res.data);
+
+      const updatedAnimeList = animeList.map((anime) => {
+        if (anime.id === id) {
+          return { ...anime, ...res.data };
+        }
+
+        return anime;
+      });
+      setAnimeList(updatedAnimeList);
+
+      navigate('/');
+    } catch (errors) {
+      console.error(errors);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const deleteAnimeById = async (id) => {
     setIsLoading(true);
-
     try {
       await axios.delete(`http://localhost:4000/animeList/${id}`);
 
@@ -84,6 +109,7 @@ function AnimeContextProvider({ children }) {
     getAnimeList,
     getAnimeById,
     addAnime,
+    editAnimeById,
     deleteAnimeById,
   };
 

@@ -15,11 +15,10 @@
   ],
   "animeList": [
     {
-      "id": 1,
-      "title": "Naruto",
-      "desc": "Moments before Naruto Uzumaki's birth, a huge demon known as the Nine-Tailed Fox attacked Konohagakure.",
-      "img": "https://cdn.myanimelist.net/images/anime/1141/142503.jpg",
-      "user": 1
+      "title": "Naruto 4",
+      "desc": "ahmed hosny",
+      "img": "ahmed",
+      "id": 1
     },
     {
       "id": 3,
@@ -29,10 +28,9 @@
       "user": 2
     },
     {
-      "title": "ahmed",
-      "desc": "dqwfqwfqwff",
-      "img": "qefqewfqf",
-      "user": 1,
+      "title": "ahmed hosny",
+      "desc": "ahmed hosny",
+      "img": "ahmed hosny",
       "id": 5
     },
     {
@@ -99,17 +97,16 @@
       "id": 15
     },
     {
-      "title": "jnrtsjrskj",
-      "desc": "ryskryksry",
-      "img": "rsltultulul",
+      "title": "ahmed reda",
+      "desc": "ahmed reda",
+      "img": "ahmed reda",
       "user": 1,
       "id": 16
     },
     {
-      "title": "jnrtsjrskj",
-      "desc": "ryskryksry",
-      "img": "rsltultulul",
-      "user": 1,
+      "title": "hosny",
+      "desc": "hosny",
+      "img": "hosny",
       "id": 17
     }
   ]

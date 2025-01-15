@@ -8,7 +8,7 @@ function EditAnimeForm() {
   const { id } = useParams();
   // console.log(id);
 
-  const { getAnimeById, isLoading } = useContext(AnimeContext);
+  const { getAnimeById, editAnimeById, isLoading } = useContext(AnimeContext);
 
   const { register, handleSubmit, formState, reset } = useForm();
   const { errors } = formState;
@@ -19,6 +19,10 @@ function EditAnimeForm() {
 
   const onSubmit = (data) => {
     console.log(data);
+
+    const { title, desc, img } = data;
+
+    editAnimeById(id, title, desc, img);
   };
 
   const onError = (errors) => {
