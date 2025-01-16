@@ -2,112 +2,45 @@
   "users": [
     {
       "email": "ahmed707hosny@gmail.com",
-      "password": "$2a$10$hxAO.OQW1HgkLBE.pivwlOwMxaJ5RzUmwqYyS965SZhSlqUahkVDC",
+      "password": "$2a$10$Wl7Qdfrq/9e2CPMHdg9CS.l1ECJVM2kY.GToGmagkK.l89.0ct3.O",
       "name": "Ahmed Hosny",
       "id": 1
     },
     {
       "email": "ahmed606hosny@gmail.com",
-      "password": "$2a$10$.s7LSzW4kbH07ezgFE/A8O0wsqAx1KzZe2/eSzKnkmHvtppvQYmFq",
-      "name": "ninja turtles",
+      "password": "$2a$10$66.AqDEvBWK53gG40.jAvu/ySWoZMrW.KcbFV0jqjCsGyUo4Lovby",
+      "name": "Mahmoud Hosny",
       "id": 2
     }
   ],
   "animeList": [
     {
-      "title": "Naruto 4",
-      "desc": "ahmed hosny",
-      "img": "ahmed",
+      "title": "Jujutsu Kaisen",
+      "desc": "Idly indulging in baseless paranormal activities with the Occult Club.",
+      "img": "https://cdn.myanimelist.net/images/anime/1171/109222.jpg",
+      "user": 1,
       "id": 1
     },
     {
-      "id": 3,
+      "title": "Death Note",
+      "desc": "Brutal murders, petty thefts, and senseless violence pollute the human world.",
+      "img": "https://cdn.myanimelist.net/images/anime/1079/138100.jpg",
+      "user": 1,
+      "id": 2
+    },
+    {
       "title": "Naruto",
       "desc": "Moments before Naruto Uzumaki's birth, a huge demon known as the Nine-Tailed Fox attacked Konohagakure.",
       "img": "https://cdn.myanimelist.net/images/anime/1141/142503.jpg",
-      "user": 2
+      "user": 2,
+      "id": 3
     },
     {
-      "title": "ahmed hosny",
-      "desc": "ahmed hosny",
-      "img": "ahmed hosny",
-      "id": 5
-    },
-    {
-      "title": "qwdqwfq",
-      "desc": "qffqfqfqf",
-      "img": "qfqfqfq",
-      "user": 1,
-      "id": 6
-    },
-    {
-      "title": "qwdqwfq",
-      "desc": "qffqfqfqf",
-      "img": "qfqfqfq",
-      "user": 1,
-      "id": 7
-    },
-    {
-      "title": "qwdqwfq",
-      "desc": "qffqfqfqf",
-      "img": "qfqfqfq",
-      "user": 1,
-      "id": 9
-    },
-    {
-      "title": "qwdqwfq",
-      "desc": "qffqfqfqf",
-      "img": "qfqfqfq",
-      "user": 1,
-      "id": 10
-    },
-    {
-      "title": "qwdqwfq",
-      "desc": "qffqfqfqf",
-      "img": "qfqfqfq",
-      "user": 1,
-      "id": 11
-    },
-    {
-      "title": "qwdqwfq",
-      "desc": "qffqfqfqf",
-      "img": "qfqfqfq",
-      "user": 1,
-      "id": 12
-    },
-    {
-      "title": "mfyfiyu",
-      "desc": "jdlyuiru5edudo",
-      "img": "xhsyrdsyrs",
-      "user": 1,
-      "id": 14
-    },
-    {
-      "title": "jnrtsjrskj",
-      "desc": "ryskryksry",
-      "img": "rsltultulul",
-      "user": 1,
-      "id": 15
-    },
-    {
-      "title": "ahmed reda",
-      "desc": "ahmed reda",
-      "img": "ahmed reda",
-      "user": 1,
-      "id": 16
-    },
-    {
-      "title": "hosny",
-      "desc": "hosny",
-      "img": "hosny",
-      "id": 17
-    },
-    {
-      "title": "ahmed",
-      "desc": "dwqfqwfqwfgg",
-      "img": "gwqegewgweggw",
-      "user": 1,
-      "id": 18
+      "title": "Hunter x Hunter",
+      "desc": "Hunters devote themselves to accomplishing hazardous tasks, all from traversing the world's uncharted.",
+      "img": "https://cdn.myanimelist.net/images/anime/1337/99013.jpg",
+      "user": 2,
+      "id": 4
     }
   ]
 }

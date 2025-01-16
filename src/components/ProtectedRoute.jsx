@@ -5,7 +5,7 @@ import { UserRound } from 'lucide-react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-function Gard({ children, page }) {
+function ProtectedRoute({ children, page }) {
   const { isLoggedIn } = useContext(AuthContext);
   // console.log(isLoggedIn);
 
@@ -39,9 +39,9 @@ function Gard({ children, page }) {
   return <>{children}</>;
 }
 
-Gard.propTypes = {
+ProtectedRoute.propTypes = {
   children: PropTypes.node,
   page: PropTypes.string,
 };
 
-export default Gard;
+export default ProtectedRoute;

@@ -34,7 +34,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 px-4">
+      <section className="min-h-96 bg-gray-50 px-4">
         <div className="max-w-screen-lg mx-auto">
           <ul className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {renderedAnimeList}

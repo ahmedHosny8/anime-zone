@@ -6,7 +6,7 @@ import SignupPage from './pages/SignupPage';
 import CreatePage from './pages/CreatePage';
 import EditPage from './pages/EditPage';
 import NotFoundPage from './pages/NotFoundPage';
-import Gard from './components/Gard';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
@@ -20,33 +20,33 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: (
-          <Gard page="login">
+          <ProtectedRoute page="login">
             <LoginPage />
-          </Gard>
+          </ProtectedRoute>
         ),
       },
       {
         path: '/signup',
         element: (
-          <Gard page="signup">
+          <ProtectedRoute page="signup">
             <SignupPage />
-          </Gard>
+          </ProtectedRoute>
         ),
       },
       {
         path: '/create',
         element: (
-          <Gard page="create">
+          <ProtectedRoute page="create">
             <CreatePage />
-          </Gard>
+          </ProtectedRoute>
         ),
       },
       {
         path: '/edit/:id',
         element: (
-          <Gard page="edit">
+          <ProtectedRoute page="edit">
             <EditPage />
-          </Gard>
+          </ProtectedRoute>
         ),
       },
       {
