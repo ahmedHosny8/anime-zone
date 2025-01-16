@@ -97,7 +97,7 @@ function EditAnimeForm() {
           disabled={isLoading}
           variation={isLoading ? 'disabled' : 'primary'}
         >
-          {isLoading ? 'Creating...' : 'Add'}
+          {isLoading ? 'Creating...' : 'Edit'}
         </Button>
       </div>
     </form>

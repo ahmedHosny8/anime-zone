@@ -41,6 +41,13 @@
       "img": "https://cdn.myanimelist.net/images/anime/1337/99013.jpg",
       "user": 2,
       "id": 4
+    },
+    {
+      "title": "Tokyo Ghoul",
+      "desc": "A sinister threat is invading Tokyo: flesh-eating \\\"ghouls\\\" who appear identical to humans and blend into their population.",
+      "img": "https://cdn.myanimelist.net/images/anime/1498/134443.jpg",
+      "user": 1,
+      "id": 5
     }
   ]
 }

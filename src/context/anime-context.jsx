@@ -43,7 +43,7 @@ function AnimeContextProvider({ children }) {
     setIsLoading(true);
     try {
       const res = await axios.post(
-        'http://localhost:4000/animeList/',
+        'http://localhost:4000/664/animeList/',
         animeObj
       );
       console.log(res.data);
@@ -57,7 +57,7 @@ function AnimeContextProvider({ children }) {
       navigate('/');
     } catch (err) {
       console.error(err.message);
-      toast.error('Post could not be created');
+      toast.error('Unauthorized you should login to make this action');
     } finally {
       setIsLoading(false);
     }
@@ -66,11 +66,14 @@ function AnimeContextProvider({ children }) {
   const editAnimeById = async (id, newTitle, newDesc, newImg) => {
     setIsLoading(true);
     try {
-      const res = await axios.patch(`http://localhost:4000/animeList/${id}`, {
-        title: newTitle,
-        desc: newDesc,
-        img: newImg,
-      });
+      const res = await axios.patch(
+        `http://localhost:4000/664/animeList/${id}`,
+        {
+          title: newTitle,
+          desc: newDesc,
+          img: newImg,
+        }
+      );
       console.log(res.data);
 
       const updatedAnimeList = animeList.map((anime) => {
@@ -87,7 +90,7 @@ function AnimeContextProvider({ children }) {
       navigate('/');
     } catch (errors) {
       console.error(errors.message);
-      toast.error('Post could not be edited');
+      toast.error('Unauthorized you should login to make this action');
     } finally {
       setIsLoading(false);
     }
@@ -96,7 +99,7 @@ function AnimeContextProvider({ children }) {
   const deleteAnimeById = async (id) => {
     setIsLoading(true);
     try {
-      await axios.delete(`http://localhost:4000/animeList/${id}`);
+      await axios.delete(`http://localhost:4000/664/animeList/${id}`);
 
       const updatedAnimeList = animeList.filter((anime) => {
         return anime.id !== id;
@@ -106,7 +109,7 @@ function AnimeContextProvider({ children }) {
       toast.success('Post successfully deleted');
     } catch (err) {
       console.error(err.message);
-      toast.error('Post could not be deleted');
+      toast.error('Unauthorized you should login to make this action');
     } finally {
       setIsLoading(false);
     }
