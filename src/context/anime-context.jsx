@@ -41,10 +41,17 @@ function AnimeContextProvider({ children }) {
 
   const addAnime = async (animeObj) => {
     setIsLoading(true);
+    const accessToken = localStorage.getItem('authToken');
+
     try {
       const res = await axios.post(
         'http://localhost:4000/664/animeList/',
-        animeObj
+        animeObj,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
       );
       console.log(res.data);
 
@@ -65,6 +72,8 @@ function AnimeContextProvider({ children }) {
 
   const editAnimeById = async (id, newTitle, newDesc, newImg) => {
     setIsLoading(true);
+    const accessToken = localStorage.getItem('authToken');
+
     try {
       const res = await axios.patch(
         `http://localhost:4000/664/animeList/${id}`,
@@ -72,6 +81,11 @@ function AnimeContextProvider({ children }) {
           title: newTitle,
           desc: newDesc,
           img: newImg,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
         }
       );
       console.log(res.data);
@@ -98,8 +112,14 @@ function AnimeContextProvider({ children }) {
 
   const deleteAnimeById = async (id) => {
     setIsLoading(true);
+    const accessToken = localStorage.getItem('authToken');
+
     try {
-      await axios.delete(`http://localhost:4000/664/animeList/${id}`);
+      await axios.delete(`http://localhost:4000/664/animeList/${id}`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
 
       const updatedAnimeList = animeList.filter((anime) => {
         return anime.id !== id;
