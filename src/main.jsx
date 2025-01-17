@@ -2,6 +2,7 @@ import './index.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Toaster } from 'react-hot-toast';
+import DarkModeContextProvider from './context/dark-mode-context.jsx';
 import App from './App.jsx';
 
 createRoot(document.getElementById('root')).render(
@@ -24,6 +25,9 @@ createRoot(document.getElementById('root')).render(
         },
       }}
     />
-    <App />
+
+    <DarkModeContextProvider>
+      <App />
+    </DarkModeContextProvider>
   </StrictMode>
 );

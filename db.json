@@ -2,13 +2,13 @@
   "users": [
     {
       "email": "ahmed707hosny@gmail.com",
-      "password": "$2a$10$Wl7Qdfrq/9e2CPMHdg9CS.l1ECJVM2kY.GToGmagkK.l89.0ct3.O",
+      "password": "$2a$10$zYMGQRZXjVnKTi0xTQ3tKONOGXMoWMng/zgyKJoLQzzj/pqAgN2A.",
       "name": "Ahmed Hosny",
       "id": 1
     },
     {
       "email": "ahmed606hosny@gmail.com",
-      "password": "$2a$10$66.AqDEvBWK53gG40.jAvu/ySWoZMrW.KcbFV0jqjCsGyUo4Lovby",
+      "password": "$2a$10$fMOP7RdV9eTUD90fPAt9j.AyChve0ZUPpK2HiSgLNoTOhAq143XB.",
       "name": "Mahmoud Hosny",
       "id": 2
     }
@@ -41,13 +41,6 @@
       "img": "https://cdn.myanimelist.net/images/anime/1337/99013.jpg",
       "user": 2,
       "id": 4
-    },
-    {
-      "title": "Tokyo Ghoul",
-      "desc": "A sinister threat is invading Tokyo: flesh-eating \\\"ghouls\\\" who appear identical to humans and blend into their population.",
-      "img": "https://cdn.myanimelist.net/images/anime/1498/134443.jpg",
-      "user": 1,
-      "id": 5
     }
   ]
 }
