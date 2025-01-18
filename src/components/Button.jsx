@@ -1,7 +1,12 @@
+import { useContext } from 'react';
+import { DarkModeContext } from '../context/dark-mode-context';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function Button({ children, variation, type, to, onClick, disabled }) {
+  const { isDarkMode } = useContext(DarkModeContext);
+  // console.log(isDarkMode);
+
   const base =
     'flex items-center justify-center py-2 px-4 rounded-full font-semibold text-sm transition-all duration-300';
 
@@ -17,8 +22,15 @@ function Button({ children, variation, type, to, onClick, disabled }) {
     disabled: base + ' bg-gray-200',
     iconWarning:
       iconBase + ' bg-[var(--color-red-700)] hover:bg-[var(--color-red-800)]',
-    iconAction: iconBase + ' bg-[var(--color-gray-500)] hover:bg-gray-800',
+    iconAction:
+      iconBase +
+      `${
+        isDarkMode
+          ? ' bg-[var(--color-gray-100)]  hover:bg-[var(--color-gray-50)]'
+          : ' bg-[var(--color-gray-200)] hover:bg-[var(--color-gray-300)]'
+      } `,
   };
+  console.log(styles.iconAction);
 
   if (to)
     return (

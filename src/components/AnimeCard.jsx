@@ -36,7 +36,7 @@ function AnimeCard({ anime }) {
       {userInfo?.id === anime.user && (
         <div className="absolute top-2 right-2 flex gap-2 items-center">
           <Button variation="iconAction" to={`/edit/${anime.id}`}>
-            <Pencil size={16} color="white" />
+            <Pencil size={16} color="var(--color-gray-700)" />
           </Button>
           <Button
             variation="iconWarning"
