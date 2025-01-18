@@ -11,6 +11,12 @@
       "password": "$2a$10$fMOP7RdV9eTUD90fPAt9j.AyChve0ZUPpK2HiSgLNoTOhAq143XB.",
       "name": "Mahmoud Hosny",
       "id": 2
+    },
+    {
+      "email": "ahmed505hosny@gmail.com",
+      "password": "$2a$10$rUNRj3zT8gEa9BQHYIfM3ON9nzgf5/VXluVYY28ckdAhAL1f.X.sq",
+      "name": "ninja turtles",
+      "id": 3
     }
   ],
   "animeList": [
@@ -55,69 +61,6 @@
       "img": "fewfwfw",
       "user": 1,
       "id": 6
-    },
-    {
-      "title": "yrjryjr",
-      "desc": "athjetjetajta",
-      "img": "ethetjhtjtj",
-      "user": 1,
-      "id": 7
-    },
-    {
-      "title": "fewfqef",
-      "desc": "qegfewgweg",
-      "img": "whwrhwrhhwh",
-      "user": 1,
-      "id": 8
-    },
-    {
-      "title": "mrymrymry",
-      "desc": "mkryktr,",
-      "img": "mry,mr,",
-      "user": 1,
-      "id": 9
-    },
-    {
-      "title": "ntrjtr",
-      "desc": "jtrjtrj",
-      "img": "trjtrjr",
-      "user": 1,
-      "id": 10
-    },
-    {
-      "title": "rjtrjtrjrte",
-      "desc": "jetjetj",
-      "img": "jetjetj",
-      "user": 1,
-      "id": 11
-    },
-    {
-      "title": "herhrj",
-      "desc": "etjetj",
-      "img": "jejejjejeje",
-      "user": 1,
-      "id": 12
-    },
-    {
-      "title": "rymrtjrjk",
-      "desc": "rkrkrkrkr",
-      "img": "rkrkrkkkrkrkr",
-      "user": 1,
-      "id": 13
-    },
-    {
-      "title": "dwqwqdwqq",
-      "desc": "wfqwfqwf",
-      "img": "fqfqfqfq",
-      "user": 1,
-      "id": 14
-    },
-    {
-      "title": "qwdqdqd",
-      "desc": "qdqdqqqd",
-      "img": "qdqdqdqdq",
-      "user": 1,
-      "id": 15
     }
   ]
 }

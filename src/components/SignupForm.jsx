@@ -26,7 +26,7 @@ function SignupForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit, onError)}
-      className="relative z-10 mt-40 min-w-xs max-w-md mx-auto py-10 px-4 flex flex-col gap-4 bg-white border border-gray-200/80 rounded-2xl overflow-hidden shadow-2xl shadow-gray-500/10"
+      className="relative z-10 mt-40 min-w-xs max-w-md mx-auto py-8 px-4 flex flex-col gap-4 bg-[var(--color-gray-0)] border border-[var(--color-gray-100)] rounded-2xl overflow-hidden shadow-sm shadow-[var(--color-shadow-sm)]"
     >
       <div className="flex flex-col gap-1">
         <label htmlFor="name" className="font-semibold">
@@ -35,7 +35,7 @@ function SignupForm() {
         <input
           type="text"
           id="name"
-          className="input input-bordered grow"
+          className="input input-bordered grow bg-[var(--color-gray-50)]"
           {...register('name', {
             required: 'This field is required',
             minLength: {
@@ -55,7 +55,7 @@ function SignupForm() {
         <input
           type="email"
           id="email"
-          className="input input-bordered grow"
+          className="input input-bordered grow bg-[var(--color-gray-50)]"
           {...register('email', {
             required: 'This field is required',
             pattern: {
@@ -75,7 +75,7 @@ function SignupForm() {
         <input
           type="password"
           id="password"
-          className="input input-bordered grow"
+          className="input input-bordered grow bg-[var(--color-gray-50)]"
           {...register('password', {
             required: 'This field is required',
             minLength: {
@@ -97,7 +97,7 @@ function SignupForm() {
         <input
           type="password"
           id="passwordConfirm"
-          className="input input-bordered grow"
+          className="input input-bordered grow bg-[var(--color-gray-50)]"
           {...register('passwordConfirm', {
             required: 'This field is required',
             validate: (value) =>
@@ -115,7 +115,7 @@ function SignupForm() {
         <Button
           type="reset"
           disabled={isLoading}
-          variation={isLoading ? 'disabled' : 'accent'}
+          variation={isLoading ? 'disabled' : 'secondary'}
         >
           {isLoading ? 'Creating' : 'Reset'}
         </Button>
