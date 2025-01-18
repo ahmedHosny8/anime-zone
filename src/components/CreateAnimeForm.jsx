@@ -35,7 +35,7 @@ function CreateAnimeForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit, onError)}
-      className="min-w-xs max-w-md mx-auto py-8 px-4 flex flex-col gap-4 bg-white border border-gray-200/80 rounded-2xl overflow-hidden shadow-2xl shadow-gray-500/10"
+      className="min-w-xs max-w-md mx-auto py-8 px-4 flex flex-col gap-4 bg-[var(--color-gray-0)] border border-[var(--color-gray-100)] rounded-2xl overflow-hidden shadow-sm shadow-[var(--color-shadow-sm)]"
     >
       <div className="flex flex-col gap-1">
         <label htmlFor="title" className="font-semibold">
@@ -44,7 +44,7 @@ function CreateAnimeForm() {
         <input
           type="text"
           id="title"
-          className="input input-bordered grow"
+          className="input input-bordered grow bg-[var(--color-gray-50)]"
           {...register('title', {
             required: 'This field is required',
             minLength: {
@@ -65,7 +65,7 @@ function CreateAnimeForm() {
         <textarea
           type="text"
           id="desc"
-          className="textarea textarea-bordered textarea-lg w-full"
+          className="textarea textarea-bordered textarea-lg w-full bg-[var(--color-gray-50)]"
           {...register('desc', {
             required: 'This field is required',
           })}
@@ -82,7 +82,7 @@ function CreateAnimeForm() {
         <input
           type="text"
           id="img"
-          className="input input-bordered grow"
+          className="input input-bordered grow  bg-[var(--color-gray-50)]"
           {...register('img', {
             required: 'This field is required',
           })}
@@ -93,7 +93,7 @@ function CreateAnimeForm() {
       </div>
 
       <div className="mt-4 flex gap-4 justify-end">
-        <Button to="/" variation={isLoading ? 'disabled' : 'accent'}>
+        <Button to="/" variation={isLoading ? 'disabled' : 'secondary'}>
           {isLoading ? 'Creating...' : 'Cancel'}
         </Button>
         <Button
