@@ -15,19 +15,20 @@ function ProtectedRoute({ children, page }) {
 
   if (!isLoggedIn && (page === 'create' || page === 'edit')) {
     return (
-      <section className="min-h-screen bg-gray-50 py-14 px-4">
+      <section className="min-h-screen bg-[var(--color-gray-50)] py-14 px-4">
         <div className="max-w-screen-lg mx-auto">
           <div className="flex flex-col items-center">
             <UserRound
               size={144}
               strokeWidth={1}
-              className="mb-2 text-gray-400"
+              color="var(--color-gray-300)"
+              className="mb-2"
             />
-            <h1 className="max-w-96 mb-4 font-semibold text-center text-gray-500 text-3xl">
+            <h1 className="max-w-96 mb-4 font-semibold text-center text-3xl">
               You should log in to add your favorite anime
             </h1>
 
-            <Button to="/login" variation="accent">
+            <Button to="/login" variation="secondary">
               Login
             </Button>
           </div>
