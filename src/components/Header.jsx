@@ -10,7 +10,7 @@ function Header() {
   const { isLoggedIn, handleLogout } = useContext(AuthContext);
 
   return (
-    <header className="bg-[var(--color-gray-0)] px-4 py-2 shadow-xl shadow-gray-200/20">
+    <header className="bg-[var(--color-gray-0)] px-4 py-2 shadow-sm shadow-[var(--color-shadow-sm)]">
       <div className="max-w-screen-lg mx-auto">
         <div className="grid grid-cols-3 justify-items-center items-center">
           {/* {userInfo && <p className="font-bold text-sm">{userInfo?.name}</p>} */}
@@ -24,7 +24,7 @@ function Header() {
             <ul>
               <li>
                 {isLoggedIn ? (
-                  <Button onClick={handleLogout} variation="accent">
+                  <Button onClick={handleLogout} variation="secondary">
                     Logout
                   </Button>
                 ) : (

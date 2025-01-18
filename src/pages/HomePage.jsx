@@ -22,19 +22,19 @@ function HomePage() {
 
   return (
     <>
-      <section className="bg-gray-50 py-14 px-4">
+      <section className="bg-[var(--color-gray-50)] py-14 px-4">
         <div className="max-w-screen-lg mx-auto">
           <div className="flex items-center justify-center gap-4">
             <img className="h-48" src={pikachuImage} alt="Pikachu" />
             <h1 className="font-extrabold text-5xl -mt-14">
-              <span className="text-brand">Anime</span>
+              <span className="text-[var(--color-brand-600)]">Anime</span>
               <br /> List
             </h1>
           </div>
         </div>
       </section>
 
-      <section className="min-h-96 bg-gray-50 px-4">
+      <section className="min-h-96 py-14 px-4 bg-[var(--color-gray-50)]">
         <div className="max-w-screen-lg mx-auto">
           <ul className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {renderedAnimeList}
@@ -44,7 +44,7 @@ function HomePage() {
 
       <Link
         to="/create"
-        className="fixed bottom-8 right-8 inline-block p-4 rounded-full transition-all duration-300 bg-brand hover:bg-brand-dark"
+        className="fixed bottom-8 right-8 inline-block p-4 rounded-full transition-all duration-300 bg-[var(--color-brand-600)]  hover:bg-[var(--color-brand-700)]"
       >
         <Plus size={24} color="white" />
       </Link>

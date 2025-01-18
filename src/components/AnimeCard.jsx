@@ -18,7 +18,7 @@ function AnimeCard({ anime }) {
   };
 
   return (
-    <article className="relative p-4 grid grid-cols-3 items-center bg-white border border-gray-200/80 rounded-2xl overflow-hidden shadow-2xl shadow-gray-500/10">
+    <article className="relative p-4 grid grid-cols-3 items-center bg-[var(--color-gray-0)] border border-[var(--color-gray-100)] rounded-2xl overflow-hidden shadow-sm shadow-[var(--color-shadow-sm)]">
       <img
         className="h-40 w-full rounded-lg object-cover object-center"
         src={imageSrc}
@@ -27,7 +27,7 @@ function AnimeCard({ anime }) {
       />
 
       <div className="col-span-2 h-full w-full py-4 px-4">
-        <h1 className="mt-6 mb-1 text-brand font-bold text-xl">
+        <h1 className="mt-6 mb-1 font-bold text-xl text-[var(--color-brand-600)]">
           {anime.title}
         </h1>
         <p className="font-semibold text-sm">{anime.desc.slice(0, 48)}</p>
@@ -35,7 +35,7 @@ function AnimeCard({ anime }) {
 
       {userInfo?.id === anime.user && (
         <div className="absolute top-2 right-2 flex gap-2 items-center">
-          <Button variation="iconAccent" to={`/edit/${anime.id}`}>
+          <Button variation="iconAction" to={`/edit/${anime.id}`}>
             <Pencil size={16} color="white" />
           </Button>
           <Button

@@ -15,8 +15,9 @@ function Button({ children, variation, type, to, onClick, disabled }) {
     warning: base + ' bg-red-500 text-white hover:bg-red-700',
     link: 'text-blue-500 font-semibold transition-all duration-300 hover:underline',
     disabled: base + ' bg-gray-200',
-    iconWarning: iconBase + ' bg-red-500 hover:bg-red-700',
-    iconAccent: iconBase + ' bg-gray-600 hover:bg-gray-800',
+    iconWarning:
+      iconBase + ' bg-[var(--color-red-700)] hover:bg-[var(--color-red-800)]',
+    iconAction: iconBase + ' bg-[var(--color-gray-200)] hover:bg-gray-800',
   };
 
   if (to)
