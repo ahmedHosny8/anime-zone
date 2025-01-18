@@ -17,7 +17,7 @@ function Button({ children, variation, type, to, onClick, disabled }) {
     disabled: base + ' bg-gray-200',
     iconWarning:
       iconBase + ' bg-[var(--color-red-700)] hover:bg-[var(--color-red-800)]',
-    iconAction: iconBase + ' bg-[var(--color-gray-200)] hover:bg-gray-800',
+    iconAction: iconBase + ' bg-[var(--color-gray-500)] hover:bg-gray-800',
   };
 
   if (to)
