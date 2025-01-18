@@ -14,10 +14,18 @@ function Button({ children, variation, type, to, onClick, disabled }) {
     'h-11 w-11 flex items-center justify-center rounded-lg transition-all duration-300';
 
   const styles = {
-    primary: base + ' text-white bg-brand hover:bg-brand-dark',
-    secondary: base + ' bg-gray-100 hover:bg-gray-300',
-    accent: base + ' text-white bg-gray-600 hover:bg-gray-800',
-    warning: base + ' bg-red-500 text-white hover:bg-red-700',
+    primary:
+      base +
+      ' text-white bg-[var(--color-brand-600)]  hover:bg-[var(--color-brand-700)]',
+    secondary:
+      base +
+      `${
+        isDarkMode
+          ? ' bg-[var(--color-gray-100)]  hover:bg-[var(--color-gray-50)]'
+          : ' bg-[var(--color-gray-200)] hover:bg-[var(--color-gray-300)]'
+      } `,
+    // accent: base + ' text-white bg-gray-600 hover:bg-gray-800',
+    // warning: base + ' bg-red-500 text-white hover:bg-red-700',
     link: 'text-blue-500 font-semibold transition-all duration-300 hover:underline',
     disabled: base + ' bg-gray-200',
     iconWarning:
@@ -30,7 +38,6 @@ function Button({ children, variation, type, to, onClick, disabled }) {
           : ' bg-[var(--color-gray-200)] hover:bg-[var(--color-gray-300)]'
       } `,
   };
-  console.log(styles.iconAction);
 
   if (to)
     return (
