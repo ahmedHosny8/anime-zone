@@ -3,7 +3,7 @@ import narutoImage from '../assets/naruto-01.png';
 
 function LoginPage() {
   return (
-    <section className="min-h-screen bg-gray-50 py-14 px-4">
+    <section className="min-h-screen bg-[var(--color-gray-50)] py-14 px-4">
       <div className="max-w-screen-lg mx-auto">
         <div className="relative">
           <h1 className="mb-10 font-extrabold text-4xl text-center">
