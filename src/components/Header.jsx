@@ -20,7 +20,7 @@ function Header() {
             <img src={akatsukiLogo} alt="Pizza Logo" className="h-16" />
           </Link>
 
-          <nav className="col-start-3 justify-self-end">
+          <nav className="col-start-3">
             <ul>
               <li>
                 {isLoggedIn ? (
