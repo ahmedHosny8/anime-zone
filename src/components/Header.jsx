@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { UserRound } from 'lucide-react';
 import Button from './Button';
 import DarkModeToggle from './DarkModeToggle';
-import onePieceLogo from '../assets/one-piece.svg';
+import akatsukiLogo from '../assets/akatsuki-logo.png';
 
 function Header() {
   const { isLoggedIn, handleLogout } = useContext(AuthContext);
@@ -17,7 +17,7 @@ function Header() {
           <DarkModeToggle />
 
           <Link to="/" className="col-start-2">
-            <img src={onePieceLogo} alt="Pizza Logo" className="h-20" />
+            <img src={akatsukiLogo} alt="Pizza Logo" className="h-16" />
           </Link>
 
           <nav className="col-start-3 justify-self-end">
