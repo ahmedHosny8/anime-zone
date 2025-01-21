@@ -4,6 +4,8 @@
 
 ## Screenshots
 
+![project prev image](https://github.com/ahmedHosny8/storage-/blob/main/anime-zone-images/anime-01.png?raw=true)
+
 ## Features
 
 - All users can browse and explore all anime posts.
