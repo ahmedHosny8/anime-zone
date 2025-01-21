@@ -2,28 +2,28 @@
   "users": [
     {
       "email": "ahmed707hosny@gmail.com",
-      "password": "$2a$10$zYMGQRZXjVnKTi0xTQ3tKONOGXMoWMng/zgyKJoLQzzj/pqAgN2A.",
+      "password": "$2a$10$nCd7cG5lRAi5TDDsvH1sBuZIhiyzDSPr4uoDBh9CoLtuIgI45JD0K",
       "name": "Ahmed Hosny",
       "id": 1
     },
     {
       "email": "ahmed606hosny@gmail.com",
-      "password": "$2a$10$fMOP7RdV9eTUD90fPAt9j.AyChve0ZUPpK2HiSgLNoTOhAq143XB.",
+      "password": "$2a$10$zmTEf150vyWZKgCGh36Qz.usMBfyUNoTdYwy11XATLUpkO7EukxtS",
       "name": "Mahmoud Hosny",
       "id": 2
     },
     {
-      "email": "ahmed505hosny@gmail.com",
-      "password": "$2a$10$rUNRj3zT8gEa9BQHYIfM3ON9nzgf5/VXluVYY28ckdAhAL1f.X.sq",
-      "name": "ninja turtles",
+      "email": "test@gmail.com",
+      "password": "$2a$10$pU/e/90.xJ10.un5LCu/KexYcVqVwLMsvJUPwQxh5ANrjiT9BbXAS",
+      "name": "Ahmed Hosny",
       "id": 3
     }
   ],
   "animeList": [
     {
-      "title": "Jujutsu Kaisen",
-      "desc": "Idly indulging in baseless paranormal activities with the Occult Club.",
-      "img": "https://cdn.myanimelist.net/images/anime/1171/109222.jpg",
+      "title": "Naruto",
+      "desc": "Moments before Naruto Uzumaki's birth, a huge demon known as the Nine-Tailed Fox attacked Konohagakure.",
+      "img": "https://cdn.myanimelist.net/images/anime/1141/142503.jpg",
       "user": 1,
       "id": 1
     },
@@ -35,31 +35,31 @@
       "id": 2
     },
     {
-      "title": "Naruto 2",
-      "desc": "Moments before Naruto Uzumaki's birth, a huge demon known as the Nine-Tailed Fox attacked Konohagakure.",
-      "img": "https://cdn.myanimelist.net/images/anime/1141/142503.jpg",
-      "user": 2,
-      "id": 3
-    },
-    {
       "title": "Hunter x Hunter",
       "desc": "Hunters devote themselves to accomplishing hazardous tasks, all from traversing the world's uncharted.",
       "img": "https://cdn.myanimelist.net/images/anime/1337/99013.jpg",
       "user": 2,
+      "id": 3
+    },
+    {
+      "title": "Jujutsu Kaisen",
+      "desc": "Idly indulging in baseless paranormal activities with the Occult Club.",
+      "img": "https://cdn.myanimelist.net/images/anime/1171/109222.jpg",
+      "user": 2,
       "id": 4
     },
     {
-      "title": "dsadwqdwq",
-      "desc": "dwqfqwf",
-      "img": "hnnsfmfhmh",
-      "user": 1,
+      "title": "Shingeki no Kyojin",
+      "desc": "Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called Titans.",
+      "img": "https://cdn.myanimelist.net/images/anime/10/47347.jpg",
+      "user": 2,
       "id": 5
     },
     {
-      "title": "ewfwefw ahmed",
-      "desc": "wefwefew",
-      "img": "fewfwfw",
-      "user": 1,
+      "title": "Kimetsu no Yaiba",
+      "desc": "Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders.",
+      "img": "https://cdn.myanimelist.net/images/anime/1286/99889.jpg",
+      "user": 2,
       "id": 6
     }
   ]
