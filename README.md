@@ -4,10 +4,10 @@
 
 ## Screenshots
 
-![App Image](https://github.com/ahmedHosny8/storage-/blob/main/anime-zone-images/anime-01.png?raw=true)
-![App Image](https://github.com/ahmedHosny8/storage/blob/main/anime-zone-images/anime-02.png?raw=true)
-![App Image](https://github.com/ahmedHosny8/storage/blob/main/anime-zone-images/anime-03.png?raw=true)
-![App Image](https://github.com/ahmedHosny8/storage/blob/main/anime-zone-images/anime-04.png?raw=true)
+![App Image](https://raw.githubusercontent.com/ahmedHosny8/storage/refs/heads/main/anime-zone-images/anime-01.webp?token=GHSAT0AAAAAACZXQGNDEOZON2Y7N3562H2UZ4QB3KQ)
+![App Image](https://raw.githubusercontent.com/ahmedHosny8/storage/refs/heads/main/anime-zone-images/anime-02.webp?token=GHSAT0AAAAAACZXQGNC4OEUEF4OFZVE3CUGZ4QB36Q)
+![App Image](https://raw.githubusercontent.com/ahmedHosny8/storage/refs/heads/main/anime-zone-images/anime-03.webp?token=GHSAT0AAAAAACZXQGNCV5CJ7FH63NDBUMCQZ4QB4TQ)
+![App Image](https://raw.githubusercontent.com/ahmedHosny8/storage/refs/heads/main/anime-zone-images/anime-04.webp?token=GHSAT0AAAAAACZXQGNCTJUXBIIWTGP3VAEQZ4QB5GQ)
 
 ## Features
 
