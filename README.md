@@ -4,10 +4,10 @@
 
 ## Screenshots
 
-![App Image](https://raw.githubusercontent.com/ahmedHosny8/storage/refs/heads/main/anime-zone-images/anime-01.webp?token=GHSAT0AAAAAACZXQGNDOGCHCL43CL43YKIOZ4QCBUA)
-![App Image](https://raw.githubusercontent.com/ahmedHosny8/storage/refs/heads/main/anime-zone-images/anime-02.webp?token=GHSAT0AAAAAACZXQGNC4OEUEF4OFZVE3CUGZ4QB36Q)
-![App Image](https://raw.githubusercontent.com/ahmedHosny8/storage/refs/heads/main/anime-zone-images/anime-03.webp?token=GHSAT0AAAAAACZXQGNCV5CJ7FH63NDBUMCQZ4QB4TQ)
-![App Image](https://raw.githubusercontent.com/ahmedHosny8/storage/refs/heads/main/anime-zone-images/anime-04.webp?token=GHSAT0AAAAAACZXQGNCTJUXBIIWTGP3VAEQZ4QB5GQ)
+![Home Light](src/assets/presentation/anime-01.webp)
+![Home Dark](src/assets/presentation/anime-02.webp)
+![Signup](src/assets/presentation/anime-03.webp)
+![Login](src/assets/presentation/anime-04.webp)
 
 ## Features
 
